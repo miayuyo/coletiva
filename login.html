@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Coletiva</title>
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/blocks.css">
+	<link rel="stylesheet" href="./css/elements.css">
+	<link rel="stylesheet" href="./css/modifiers.css">
+</head>
+
+<body class="body body--flex" id="fadeIn">
+	
+	<div class="container container--inicial">
+		<div class="logo">
+			<img class="logo__login" src="./images/reduzido-coletiva.png" alt="Coletiva">
+		</div>
+		<div class="text-header">
+			<h1 class="text-header__title">Entre na sua conta</h1>
+			<p class="text-header__paragraph">Não possui conta? <a class="text-header__link" href="#">Cadastre-se</a></p>
+		</div>
+		<div class="form">
+			<div class="form__block">
+				<input class="form__input" id="loginEmail" type="email" name="loginEmail" required>
+				<label class="form__label" for="loginEmail">E-mail</label>
+				<img class="form__icon" src="./images/icones/password.png" alt="">
+			</div>
+			<div class="form__block">
+				<input class="form__input" id="loginSenha" type="password" name="loginSenha" required>
+				<label class="form__label" for="loginSenha">Senha</label>
+				<img class="form__icon" src="./images/icones/password.png" alt="">
+			</div>
+		</div>
+		<div class="bottom">
+			<a class="bottom__button bottom__button--primario" href="">Login</a>
+			<p class="bottom__text bottom__text--small"><a class="bottom__link" href="http://">Esqueceu a senha?</a></p>
+		</div>
+	</div>
+
+
+	<!---------Início Scripts--------->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+		integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script src="./js/main.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#loading').fadeIn('slow').delay(7000).fadeOut('slow');
+		});
+	</script>
+	<!---------Fim Scripts--------->
+</body>
+
+</html>
