@@ -26,10 +26,10 @@ $('#selectable').selectable({
 });
 
 var bannerHome = new Swiper ('.swiper-container, .swiper-login', {
-    loop: false,
-    autoplayStopOnLast: true,
+    loop: false,    
     autoplay: {
         delay: 2500,
+        stopOnLastSlide: true,
     },
     pagination: {
         el: '.swiper-pagination',
