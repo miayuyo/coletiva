@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Coletiva</title>
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/blocks.css">
+	<link rel="stylesheet" href="./css/elements.css">
+	<link rel="stylesheet" href="./css/modifiers.css">
+</head>
+
+<body class="body flex flex--column flex--align-baseline flex--justify-between" id="fadeIn">
+	
+	<div class="container pt-50 pr-20 pb-20 pl-20">
+		<div class="text-header">
+			<h1 class="text-header__title">Queremos conhecer vocês!</h1>
+			<p class="text-header__paragraph">Conte só mais um pouco sobre</p>
+		</div>		
+
+		<div class="form">
+			<div class="form__block">			</div>
+			<div class="form__block">
+				<input class="form__input" id="cadastroNomeCoop" type="Nome" name="cadastroNomeCoop" required>
+				<label class="form__label" for="cadastroNomeCoop">Nome da Cooperativa</label>
+			</div>
+			<div class="form__block">
+				<input class="form__input" id="cadastroCPF" type="CPF" name="cadastroCPF" required>
+				<label class="form__label" for="cadastroCPF">CNPJ</label>
+				<div class="form__bottom">
+					<input class="form__checkbox" type="checkbox" name="semCPF" id="chk"> 
+					<label class="form__checklabel" for="semCPF">Não possuimos CNPJ</label>
+				</div>
+			</div>
+			<div class="form__block">
+				<input class="form__input" id="cadastroCelular" type="Celular" name="cadastroCelular" required>
+				<label class="form__label" for="cadastroCelular">Celular</label>
+			</div>
+			<div class="form__block">
+				<input class="form__input" id="cadastroEmail" type="email" name="cadastroEmail" required>
+				<label class="form__label" for="cadastroEmail">E-mail</label>
+			</div>
+			<div class="form__block">
+				<input class="form__input" id="cadastroSenha" type="password" name="cadastroSenha" required>
+				<label class="form__label" for="cadastroSenha">Senha</label>
+				<img class="form__icon" src="./images/icones/password.png" alt="">
+			</div>
+			<div class="form__block" style="margin-bottom: 0;">
+				<input class="form__input" id="cadastroConfSenha" type="password" name="cadastroConfSenha" required>
+				<label class="form__label" for="cadastroConfSenha">Confirmar senha</label>
+				<img class="form__icon" src="./images/icones/password.png" alt="">
+			</div>
+		</div>
+
+		<div class="bottom">
+			<p class="bottom__text bottom__text--small mt-30 mb-40">Ao prosseguir, você afirma ter lido e concordado com os nossos <a class="bottom__link" href="http://">Termos de Uso</a>.</p>
+			<a class="bottom__button bottom__button--primario" href="./cadastro-gerador-3.html">Prosseguir</a>		
+		</div>
+	</div>
+
+	<div class="bottom-container">
+		<a class="back-button" href="javascript: history.go(-1)">
+			<div class="back-button-content flex flex--align-center">
+				<img class="back-button-icon" src="./images/icones/voltar.png" alt="Ícone apontando para a esquerda">
+				<p class="back-button-text">Voltar</p>
+			</div>
+		</a>
+	</div>
+
+	<!---------Início Scripts--------->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+		integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script src="./js/main.js"></script>
+	<!---------Fim Scripts--------->
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Coletiva</title>
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/blocks.css">
+	<link rel="stylesheet" href="./css/elements.css">
+	<link rel="stylesheet" href="./css/modifiers.css">
+</head>
+
+<body class="body flex flex--column flex--align-baseline flex--justify-between" id="fadeIn">
+
+	<div class="container pt-50 pr-20 pb-20 pl-20">
+		<div class="text-header">
+			<h1 class="text-header__title">Tipos de Materiais</h1>
+			<p class="text-header__paragraph">Agora, selecione o(s) material(is) que deseja coletar</p>
+		</div>
+
+		<div class="recycle-options-container mb-50">
+			<ol id="selectable">
+				<li class="ui-state-default recycle-options-item">
+					<img src="./images/icones/lixo-plastico.png" alt="Lixo plástico">
+					<p>Plástico</p>
+				</li>
+				<li class="ui-state-default recycle-options-item">
+					<img src="./images/icones/lixo-vidro.png" alt="Lixo vidro">
+					<p>Vidro</p>
+				</li>
+				<li class="ui-state-default recycle-options-item">
+					<img src="./images/icones/lixo-metal.png" alt="Lixo metal">
+					<p>Papel</p>
+				</li>
+				<li class="ui-state-default recycle-options-item">
+					<img src="./images/icones/lixo-bateria.png" alt="Lixo bateria">
+					<p>Bateria</p>
+				</li>
+				<li class="ui-state-default recycle-options-item">
+					<img src="./images/icones/lixo-papel.png" alt="Lixo papel">
+					<p>Papel</p>
+				</li>
+			</ol>
+		</div>
+
+		<div class="bottom">
+			<a class="bottom__button bottom__button--primario" href="./cadastro-catador-4.html">Prosseguir</a>		
+		</div>
+	</div>
+
+	<div class="bottom-container">
+		<a class="back-button" href="javascript: history.go(-1)">
+			<div class="back-button-content flex flex--align-center">
+				<img class="back-button-icon" src="./images/icones/voltar.png" alt="Ícone apontando para a esquerda">
+				<p class="back-button-text">Voltar</p>
+			</div>
+		</a>
+	</div>
+
+	<!---------Início Scripts--------->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="./js/main.js"></script>
+	<!---------Fim Scripts--------->
+</body>
+
+</html>

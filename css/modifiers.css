@@ -1,7 +1,25 @@
-.body--flex {
-    display: flex;
+.text--small {
+    font-size: 12px;
+}
+
+.flex--column {
+    flex-flow: column;
+}
+
+.flex--align-center {
     align-items: center;
+}
+
+.flex--align-baseline {
+    align-items: baseline;
+}
+
+.flex--justify-center {
     justify-content: center;
+}
+
+.flex--justify-between {
+    justify-content: space-between;
 }
 
 .container--inicial {
@@ -36,4 +54,8 @@
 
 .bottom__button--secundario:active {
     box-shadow: inset 4px 4px #083958;
+}
+
+.bottom__text--small {
+    font-size: 12px;
 }

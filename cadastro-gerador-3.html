@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Coletiva</title>
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/blocks.css">
+	<link rel="stylesheet" href="./css/elements.css">
+	<link rel="stylesheet" href="./css/modifiers.css">
+</head>
+
+<body class="body flex flex--column flex--align-baseline flex--justify-between" id="fadeIn">
+	
+	<div class="container pt-15per pr-20 pb-20 pl-20">
+		<div class="text-header">
+			<h1 class="text-header__title">Diga xis</h1>
+			<p class="text-header__paragraph">E pra finalizar, dá aquele sorriso pra foto!</p>
+		</div>		
+
+		<div class="options-container">
+			<div class="options-block">
+				<a class="options-button" href="#">
+					<div class="options-button-content">
+						<p class="options-title">Tirar foto</p>
+						<img class="options-icon" src="./images/icones/camera.png" alt="Ícone representando uma casa">
+					</div>
+				</a>
+				<a class="options-button"  href="#">
+					<div class="options-button-content">
+						<p class="options-title">Procurar na galeria</p>
+						<img class="options-icon" src="./images/icones/galeria.png" alt="Ícone representando um prédio">
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="bottom">
+			<p class="bottom__text bottom__text--small mt-30 mb-40"><a class="bottom__link" href="#">Pular esta etapa</a></p>
+			<a class="bottom__button bottom__button--primario" href="#">Concluir cadastro</a>		
+		</div>
+	</div>
+
+	<div class="bottom-container">
+		<a class="back-button" href="javascript: history.go(-1)">
+			<div class="back-button-content flex flex--align-center">
+				<img class="back-button-icon" src="./images/icones/voltar.png" alt="Ícone apontando para a esquerda">
+				<p class="back-button-text">Voltar</p>
+			</div>
+		</a>
+	</div>
+
+	<!---------Início Scripts--------->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+		integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script src="./js/main.js"></script>
+	<!---------Fim Scripts--------->
+</body>
+
+</html>

@@ -1,3 +1,17 @@
+.desktop-message__text {
+    font-size: 30px;
+    font-weight: 300;
+    color: #083958;
+    text-align: center;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.desktop-message__text span {
+    font-style: italic;
+    font-weight: 400;
+}
+
 .logo__loading {
     display: block;
     margin: 0 auto;
@@ -59,11 +73,12 @@
     box-shadow: inset -4px -4px #adafbc;
     font-family: 'Press Start 2P', cursive;
     font-size: 14px;
-    text-shadow: 0 0 3px rgba(0,0,0,.4);
+    text-shadow: 0 0 3px rgba(0, 0, 0, .4);
     text-decoration: none;
 }
 
-.bottom__button::before, .bottom__button::after {
+.bottom__button::before,
+.bottom__button::after {
     position: absolute;
     box-sizing: content-box;
     width: 100%;
@@ -105,9 +120,9 @@
     font-weight: 300;
 }
 
-.form__input:focus ~ .form__label,
-.form__input:valid ~ .form__label {
-    transform: translate(15px, -70px);
+.form__input:focus~.form__label,
+.form__input:valid~.form__label {
+    transform: translate(15px, -65px);
     font-weight: 500;
     color: #0F567C;
 }
@@ -115,23 +130,28 @@
 .form__input {
     display: block;
     width: 100%;
-    height: 45px;
+    height: 43px;
     position: relative;
     border: 0;
-    background: #fff;
-    border-bottom: 2px solid #f5f5f5;
+    background: transparent;
+    border-bottom: 2px solid #fff;
     padding: 10px 15px;
-    transition: background 0.2s ease;
+    transition: .3s ease;
     font-size: 16px;
     font-weight: 500;
 }
 
-.form__input:focus {
-    outline: 0;
-    background: #f5f5f5;
+.form__input:disabled~.form__label {
+    color: #9e9e9e;
 }
 
-.form__input::before, .form__input::after {
+.form__input:focus {
+    outline: 0;
+    background: #fff;
+}
+
+.form__input::before,
+.form__input::after {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -160,4 +180,120 @@
     width: 20px;
     top: 13px;
     right: 15px;
+}
+
+.form__bottom {
+    position: relative;
+    top: -10px;
+    padding-left: 15px;
+}
+
+.form__checklabel {
+    font-size: 12px;
+    color: #9e9e9e;
+    transition: .3s ease;
+}
+
+.form__checkbox {
+    top: 2px;
+    display: inline-block;
+    position: relative;
+}
+
+.form__checkbox:checked+.form__checklabel {
+    color: #222;
+    font-weight: 500;
+}
+
+.form__checkbox:checked~.form__labelCPF {
+    color: #9e9e9e;
+}
+
+
+/*----- CADASTRO -----*/
+.options-button {
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 60px;
+}
+
+.options-button:nth-child(2) {
+    margin-bottom: 0;
+}
+
+.options-title {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.options-icon {
+    display: block;
+    max-width: 110px;
+    margin: 13px auto;
+}
+
+.options-description {
+    font-size: 14px;
+}
+
+.recycle-options-container {
+    flex-wrap: wrap;
+}
+
+.recycle-options-container ol {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.recycle-options-item img {
+    max-width: 70px;
+}
+
+#feedback {
+    font-size: 14px;
+}
+
+#selectable .ui-selecting {
+    background: #00E98F;
+}
+
+#selectable .ui-selected {
+    background: #00E98F;
+    color: #fff;
+}
+
+#selectable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#selectable li {
+    margin: 3px;
+    padding: 4px;
+    float: left;
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    transition: .3s ease;
+}
+
+.back-button {
+    display: block;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #222;
+}
+
+.back-button-icon {
+    display: block;
+    max-width: 20px;
+    margin-right: 10px;
+}
+
+.back-button-text {
+    font-size: 12px;
 }
