@@ -12,10 +12,113 @@
 	<link rel="stylesheet" href="./css/modifiers.css">
 </head>
 
-<body class="body flex flex--column flex--align-center flex--justify-center" id="fadeIn">
-	
-	<div class="container container--inicial">
-		<h1>Home</h1>
+<body class="body" id="fadeIn">
+
+	<div class="container flex flex--column flex--justify-between">
+		<div class="menu-top" id="menuBtn">
+			<img class="menu-top__button" src="./images/icones/menu.png" alt="">
+		</div>
+
+		<!---------Menu Lateral--------->
+		<!-- <div class="menu-top-overlay"></div> -->
+		<div class="menu-top-container" id="menuContainer">
+			<div class="menu-perfil">
+				<div class="menu-perfil__foto">
+					<img class="menu-perfil__nivel" src="./images/icones/nivel-master.png" alt="">
+				</div>
+				<div class="menu-perfil__info flex flex--column flex--align-center flex--justify-center">
+					<div class="menu-perfil__block">
+						<p class="size--20 weight--bold">Tiago M.</p>
+					</div>
+					<div class="menu-perfil__block">
+						<p>Rank #1</p>
+						<p>12345 pontos</p>
+					</div>
+				</div>
+			</div>
+			<div class="menu-section">
+				<ul class="menu-section__list">
+					<li><a href="#">Meu perfil</a></li>
+					<li><a href="#">Histórico de Agendamentos</a></li>
+				</ul>
+				<div class="hr"></div>
+				<ul class="menu-section__list">
+					<li><a href="#">Configurações</a></li>
+					<li><a href="#">Como funciona a Carteira</a></li>
+					<li><a href="#">Como separar o lixo corretamente</a></li>
+					<li><a href="#">Sobre a Coletiva</a></li>
+					<li><a href="./index.html">Sair da conta</a></li>
+				</ul>
+			</div>
+		</div>
+		<!---------Fim Menu Lateral--------->
+
+		<div class="map">
+		</div>
+
+		<div class="home-menu">
+			<button class="home-menu__dropdown" id="homeMenu"><span class="home-menu__line"></span></button>
+			<div class="home-menu__top flex flex--align-center flex--justify-between">
+				<div class="home-menu__block">
+					<p class="size--20">Olá, <span class="weight--medium">Tiago</span>!</p>
+				</div>
+				<div class="home-menu__block flex flex--align-center">
+					<img class="home-menu__level" src="./images/icones/nivel-master.png" alt="">
+					<p class="size--20">Nível <span class="weight--medium">Mestre</span></p>
+				</div>
+			</div>
+			<div class="home-menu__content">
+				<div class="searchbox-wrapper">
+					<input class="searchbox" type="text" name="" id="searchbox" placeholder="O que você quer descartar hoje?">
+					<img class="searchbox__icon" src="./images/icones/avancar-bit-white.png" alt="">
+				</div>
+				<p class="weight--bold size--20 mb-10">Meus favoritos</p>
+				<a class="home-menu__option flex flex--align-center flex--justify-between" href="#">
+					<img class="home-menu__icon" src="./images/icones/favorito-cooperativa.png" alt="">
+					<div class="home-menu__info">
+						<p class="size--18 weight--medium">Cooperativa Cidade Verde</p>
+						<p class="home-menu__address size--16">Rua das Sucatas, 123 - Sucatolândia, São Paulo</p>
+					</div>
+				</a>
+
+				<div class="hr"></div>
+
+				<a class="home-menu__option flex flex--align-center flex--justify-between" href="#">
+					<img class="home-menu__icon" src="./images/icones/favorito-catador.png" alt="">
+					<div class="home-menu__info">
+						<p class="size--18 weight--medium">Inácio da Silva</p>
+						<p class="home-menu__address size--16">Rua das Sucatas, 456 - Sucatolândia, São Paulo</p>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="menu flex flex--align-center flex--justify-between">
+			<a class="menu__item flex flex--column flex--align-center" href="#">
+				<div class="menu__icon--wrapper">
+					<img class="menu__icon" src="./images/icones/home.png" alt="">
+				</div>
+			</a>
+			<a class="menu__item flex flex--column flex--align-center" href="#">
+				<div class="menu__icon--wrapper">
+					<img class="menu__icon" src="./images/icones/ranking.png" alt="">
+				</div>
+			</a>
+			<a class="menu__item menu__main-item flex flex--column flex--align-center flex--justify-center" href="#">
+				<img class="menu__icon menu__icon--40" src="./images/icones/agendar.png" alt="">
+				<p class="menu__caption menu-caption--highlight">Coletivar</p>
+			</a>
+			<a class="menu__item flex flex--column flex--align-center" href="#">
+				<div class="menu__icon--wrapper">
+					<img class="menu__icon" src="./images/icones/chat.png" alt="">
+				</div>
+			</a>
+			<a class="menu__item flex flex--column flex--align-center" href="#">
+				<div class="menu__icon--wrapper">
+					<img class="menu__icon" src="./images/icones/carteira.png" alt="">
+				</div>
+			</a>
+		</div>
 	</div>
 
 	<!---------Início Scripts--------->
@@ -23,7 +126,60 @@
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
 		integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-	<script src="./js/main.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#searchbox').keydown(function (e) {
+				if (e.which === 13) {
+					window.location = "https://miayuyo.github.io/coletiva/login.html";
+				}
+			});
+
+			$('#homeMenu').click(function () {
+				mudaSlider();
+			});
+			$('#fecharLogin').click(function () {
+				mudaSlider();
+			});
+
+			function mudaSlider() {
+				if ($('.home-menu').hasClass('slide-down')) {
+					$('.home-menu').addClass('slide-up', 500);
+					$('.home-menu').removeClass('slide-down', 500);
+				} else {
+					$('.home-menu').toggleClass('slide-up', 500);
+					$('.home-menu').addClass('slide-down', 500);
+				}
+			}
+
+			$(function () {
+				$('#menuBtn').click(function (e) {
+					$('#menuContainer').addClass('slide-right', 800);
+					e.stopPropagation()
+				});
+				$(document).click(function (e) {
+					if ($(e.target).is("#menuContainer") === false) {
+						$('#menuContainer').removeClass('slide-right', 800);
+						e.stopPropagation()
+					}
+				});
+			});
+
+			function initMap() {
+				// The location of Uluru
+				var uluru = { lat: -25.344, lng: 131.036 };
+				// The map, centered at Uluru
+				var map = new google.maps.Map(
+					document.getElementById('map'), { zoom: 4, center: uluru });
+				// The marker, positioned at Uluru
+				var marker = new google.maps.Marker({ position: uluru, map: map });
+			}
+		});
+	</script>
+
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4J8DrZoHi63jtNMfPzwDrJyL56WWrv4A&callback=initMap">
+		</script>
 	<!---------Fim Scripts--------->
 </body>
 
