@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Coletiva</title>
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/blocks.css">
+	<link rel="stylesheet" href="./css/elements.css">
+	<link rel="stylesheet" href="./css/modifiers.css">
+</head>
+
+<body class="body" id="fadeIn">
+
+	<div class="container flex flex--column">
+		<div class="menu-top" id="menuBtn">
+			<img class="menu-top__button" src="./images/icones/menu.png" alt="">
+		</div>
+
+		<!---------Menu Lateral--------->
+		<!-- <div class="menu-top-overlay"></div> -->
+		<div class="menu-top-container" id="menuContainer">
+			<div class="menu-perfil">
+				<div class="menu-perfil__foto">
+					<img class="menu-perfil__nivel" src="./images/icones/nivel-master.png" alt="">
+				</div>
+				<div class="menu-perfil__info flex flex--column flex--align-center flex--justify-center">
+					<div class="menu-perfil__block">
+						<p class="size--20 weight--bold">Tiago M.</p>
+					</div>
+					<div class="menu-perfil__block">
+						<p>Rank #1</p>
+						<p>12345 pontos</p>
+					</div>
+				</div>
+			</div>
+			<div class="menu-section">
+				<ul class="menu-section__list">
+					<li><a href="#">Meu perfil</a></li>
+					<li><a href="#">Histórico de Agendamentos</a></li>
+				</ul>
+				<div class="hr"></div>
+				<ul class="menu-section__list">
+					<li><a href="#">Configurações</a></li>
+					<li><a href="#">Como funciona a Carteira</a></li>
+					<li><a href="#">Como separar o lixo corretamente</a></li>
+					<li><a href="#">Sobre a Coletiva</a></li>
+					<li><a href="./index.html">Sair da conta</a></li>
+				</ul>
+			</div>
+		</div>
+		<!---------Fim Menu Lateral--------->
+
+		<div class="header flex flex--align-center flex--justify-center">
+			<p class="size--18 weight--medium">Ranking</p>
+		</div>
+
+		<div class="ranking-section">
+			<ul class="tabs flex flex--align-center" id="tabs">
+				<li><a class="tabs__item weight--medium" id="tab1">Gerador</a></li>
+				<li><a class="tabs__item weight--medium" id="tab2">Catador</a></li>
+			</ul>
+
+			<div class="tabs-section__screen" id="tab1C">
+				<div class="top-ranking flex flex--justify-around flex--align-end">
+					<div class="top-ranking__block">
+						<p class="ranking-number size--24">2</p>
+						<div class="top-ranking__photo top-ranking__photo--2nd">
+							<img class="top-ranking__nivel" src="./images/icones/nivel-master.png" alt="">
+						</div>
+						<p class="ranking-name">Tiago M.</p>
+						<p class="ranking-pr"><span>12345</span> PR</p>
+					</div>
+					<div class="top-ranking__block">
+						<p class="ranking-number size--24">1</p>
+						<div class="top-ranking__photo top-ranking__photo--1st">
+							<img class="top-ranking__nivel" src="./images/icones/nivel-master.png" alt="">
+						</div>
+						<p class="ranking-name">Tiago M.</p>
+						<p class="ranking-pr"><span>12345</span> PR</p>
+					</div>
+					<div class="top-ranking__block">
+						<p class="ranking-number size--24">3</p>
+						<div class="top-ranking__photo top-ranking__photo--3rd">
+							<img class="top-ranking__nivel" src="./images/icones/nivel-master.png" alt="">
+						</div>
+						<p class="ranking-name">Tiago M.</p>
+						<p class="ranking-pr"><span>12345</span> PR</p>
+					</div>
+				</div>
+				<div class="ranking">
+					<a class="ranking__block flex flex--align-center flex--justify-between" href="#">
+						<div class="ranking__infos flex flex--align-center">
+							<div class="ranking__position">
+								<p class="ranking-number">4</p>
+							</div>
+							<div class="ranking__photo ranking__photo--one">
+								<img class="ranking__nivel" src="./images/icones/nivel-mediano.png" alt="">
+							</div>
+							<div class="ranking__name">
+								<p class="ranking-name">Tiago M.</p>
+							</div>
+						</div>
+						<div class="ranking__points">
+							<p class="ranking-pr"><span>12345</span> PR</p>
+						</div>
+					</a>
+					<div class="hr"></div>
+
+					<a class="ranking__block flex flex--align-center flex--justify-between" href="#">
+						<div class="ranking__infos flex flex--align-center">
+							<div class="ranking__position">
+								<p class="ranking-number">5</p>
+							</div>
+							<div class="ranking__photo ranking__photo--two">
+								<img class="ranking__nivel" src="./images/icones/nivel-mediano.png" alt="">
+							</div>
+							<div class="ranking__name">
+								<p class="ranking-name">Tiago M.</p>
+							</div>
+						</div>
+						<div class="ranking__points">
+							<p class="ranking-pr"><span>12345</span> PR</p>
+						</div>
+					</a>
+					<div class="hr"></div>
+
+					<a class="ranking__block flex flex--align-center flex--justify-between" href="#">
+						<div class="ranking__infos flex flex--align-center">
+							<div class="ranking__position">
+								<p class="ranking-number">6</p>
+							</div>
+							<div class="ranking__photo ranking__photo--two">
+								<img class="ranking__nivel" src="./images/icones/nivel-mediano.png" alt="">
+							</div>
+							<div class="ranking__name">
+								<p class="ranking-name">Tiago M.</p>
+							</div>
+						</div>
+						<div class="ranking__points">
+							<p class="ranking-pr"><span>12345</span> PR</p>
+						</div>
+					</a>
+					<div class="hr"></div>
+
+					<a class="ranking__block flex flex--align-center flex--justify-between" href="#">
+						<div class="ranking__infos flex flex--align-center">
+							<div class="ranking__position">
+								<p class="ranking-number">7</p>
+							</div>
+							<div class="ranking__photo ranking__photo--one">
+								<img class="ranking__nivel" src="./images/icones/nivel-mediano.png" alt="">
+							</div>
+							<div class="ranking__name">
+								<p class="ranking-name">Tiago M.</p>
+							</div>
+						</div>
+						<div class="ranking__points">
+							<p class="ranking-pr"><span>12345</span> PR</p>
+						</div>
+					</a>
+					<div class="hr"></div>
+
+					<a class="ranking__block flex flex--align-center flex--justify-between" href="#">
+						<div class="ranking__infos flex flex--align-center">
+							<div class="ranking__position">
+								<p class="ranking-number">8</p>
+							</div>
+							<div class="ranking__photo ranking__photo--two">
+								<img class="ranking__nivel" src="./images/icones/nivel-mediano.png" alt="">
+							</div>
+							<div class="ranking__name">
+								<p class="ranking-name">Tiago M.</p>
+							</div>
+						</div>
+						<div class="ranking__points">
+							<p class="ranking-pr"><span>12345</span> PR</p>
+						</div>
+					</a>
+					<div class="hr"></div>
+
+					<a class="ranking__block flex flex--align-center flex--justify-between" href="#">
+						<div class="ranking__infos flex flex--align-center">
+							<div class="ranking__position">
+								<p class="ranking-number">9</p>
+							</div>
+							<div class="ranking__photo ranking__photo--one">
+								<img class="ranking__nivel" src="./images/icones/nivel-baixo.png" alt="">
+							</div>
+							<div class="ranking__name">
+								<p class="ranking-name">Tiago M.</p>
+							</div>
+						</div>
+						<div class="ranking__points">
+							<p class="ranking-pr"><span>12345</span> PR</p>
+						</div>
+					</a>
+					<div class="hr"></div>
+
+					<a class="ranking__block flex flex--align-center flex--justify-between" href="#">
+						<div class="ranking__infos flex flex--align-center">
+							<div class="ranking__position">
+								<p class="ranking-number">10</p>
+							</div>
+							<div class="ranking__photo ranking__photo--two">
+								<img class="ranking__nivel" src="./images/icones/nivel-baixo.png" alt="">
+							</div>
+							<div class="ranking__name">
+								<p class="ranking-name">Tiago M.</p>
+							</div>
+						</div>
+						<div class="ranking__points">
+							<p class="ranking-pr"><span>12345</span> PR</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="tabs-section__screen" id="tab2C">
+				<div class="top-ranking flex flex--justify-around flex--align-end">
+					<div class="top-ranking__block">
+						<p class="ranking-number size--24">2</p>
+						<div class="top-ranking__photo top-ranking__photo--2nd">
+							<img class="top-ranking__nivel" src="./images/icones/nivel-master.png" alt="">
+						</div>
+						<p class="ranking-name">Tiago M.</p>
+						<p class="ranking-pr"><span>12345</span> PR</p>
+					</div>
+					<div class="top-ranking__block">
+						<p class="ranking-number size--24">1</p>
+						<div class="top-ranking__photo top-ranking__photo--1st">
+							<img class="top-ranking__nivel" src="./images/icones/nivel-master.png" alt="">
+						</div>
+						<p class="ranking-name">Tiago M.</p>
+						<p class="ranking-pr"><span>12345</span> PR</p>
+					</div>
+					<div class="top-ranking__block">
+						<p class="ranking-number size--24">3</p>
+						<div class="top-ranking__photo top-ranking__photo--3rd">
+							<img class="top-ranking__nivel" src="./images/icones/nivel-master.png" alt="">
+						</div>
+						<p class="ranking-name">Tiago M.</p>
+						<p class="ranking-pr"><span>12345</span> PR</p>
+					</div>
+				</div>
+				<div class="ranking">
+					<a class="ranking__block flex flex--align-center flex--justify-between" href="#">
+						<div class="ranking__infos flex flex--align-center">
+							<div class="ranking__position">
+								<p class="ranking-number">4</p>
+							</div>
+							<div class="ranking__photo ranking__photo--one">
+								<img class="ranking__nivel" src="./images/icones/nivel-mediano.png" alt="">
+							</div>
+							<div class="ranking__name">
+								<p class="ranking-name">Tiago M.</p>
+							</div>
+						</div>
+						<div class="ranking__points">
+							<p class="ranking-pr"><span>12345</span> PR</p>
+						</div>
+					</a>
+					<div class="hr"></div>
+
+					<a class="ranking__block flex flex--align-center flex--justify-between" href="#">
+						<div class="ranking__infos flex flex--align-center">
+							<div class="ranking__position">
+								<p class="ranking-number">5</p>
+							</div>
+							<div class="ranking__photo ranking__photo--two">
+								<img class="ranking__nivel" src="./images/icones/nivel-mediano.png" alt="">
+							</div>
+							<div class="ranking__name">
+								<p class="ranking-name">Tiago M.</p>
+							</div>
+						</div>
+						<div class="ranking__points">
+							<p class="ranking-pr"><span>12345</span> PR</p>
+						</div>
+					</a>
+					<div class="hr"></div>
+
+					<a class="ranking__block flex flex--align-center flex--justify-between" href="#">
+						<div class="ranking__infos flex flex--align-center">
+							<div class="ranking__position">
+								<p class="ranking-number">6</p>
+							</div>
+							<div class="ranking__photo ranking__photo--two">
+								<img class="ranking__nivel" src="./images/icones/nivel-mediano.png" alt="">
+							</div>
+							<div class="ranking__name">
+								<p class="ranking-name">Tiago M.</p>
+							</div>
+						</div>
+						<div class="ranking__points">
+							<p class="ranking-pr"><span>12345</span> PR</p>
+						</div>
+					</a>
+					<div class="hr"></div>
+
+					<a class="ranking__block flex flex--align-center flex--justify-between" href="#">
+						<div class="ranking__infos flex flex--align-center">
+							<div class="ranking__position">
+								<p class="ranking-number">7</p>
+							</div>
+							<div class="ranking__photo ranking__photo--one">
+								<img class="ranking__nivel" src="./images/icones/nivel-mediano.png" alt="">
+							</div>
+							<div class="ranking__name">
+								<p class="ranking-name">Tiago M.</p>
+							</div>
+						</div>
+						<div class="ranking__points">
+							<p class="ranking-pr"><span>12345</span> PR</p>
+						</div>
+					</a>
+					<div class="hr"></div>
+
+					<a class="ranking__block flex flex--align-center flex--justify-between" href="#">
+						<div class="ranking__infos flex flex--align-center">
+							<div class="ranking__position">
+								<p class="ranking-number">8</p>
+							</div>
+							<div class="ranking__photo ranking__photo--two">
+								<img class="ranking__nivel" src="./images/icones/nivel-mediano.png" alt="">
+							</div>
+							<div class="ranking__name">
+								<p class="ranking-name">Tiago M.</p>
+							</div>
+						</div>
+						<div class="ranking__points">
+							<p class="ranking-pr"><span>12345</span> PR</p>
+						</div>
+					</a>
+					<div class="hr"></div>
+
+					<a class="ranking__block flex flex--align-center flex--justify-between" href="#">
+						<div class="ranking__infos flex flex--align-center">
+							<div class="ranking__position">
+								<p class="ranking-number">9</p>
+							</div>
+							<div class="ranking__photo ranking__photo--one">
+								<img class="ranking__nivel" src="./images/icones/nivel-baixo.png" alt="">
+							</div>
+							<div class="ranking__name">
+								<p class="ranking-name">Tiago M.</p>
+							</div>
+						</div>
+						<div class="ranking__points">
+							<p class="ranking-pr"><span>12345</span> PR</p>
+						</div>
+					</a>
+					<div class="hr"></div>
+
+					<a class="ranking__block flex flex--align-center flex--justify-between" href="#">
+						<div class="ranking__infos flex flex--align-center">
+							<div class="ranking__position">
+								<p class="ranking-number">10</p>
+							</div>
+							<div class="ranking__photo ranking__photo--two">
+								<img class="ranking__nivel" src="./images/icones/nivel-baixo.png" alt="">
+							</div>
+							<div class="ranking__name">
+								<p class="ranking-name">Tiago M.</p>
+							</div>
+						</div>
+						<div class="ranking__points">
+							<p class="ranking-pr"><span>12345</span> PR</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="menu flex flex--align-center flex--justify-between">
+			<a class="menu__item flex flex--column flex--align-center" href="./app-home.html">
+				<div class="menu__icon--wrapper">
+					<img class="menu__icon" src="./images/icones/home.png" alt="">
+				</div>
+			</a>
+			<a class="menu__item flex flex--column flex--align-center" href="./app-ranking.html">
+				<div class="menu__icon--wrapper">
+					<img class="menu__icon" src="./images/icones/ranking.png" alt="">
+				</div>
+			</a>
+			<a class="menu__item menu__main-item flex flex--column flex--align-center flex--justify-center" href="./app-coletivar.html">
+				<img class="menu__icon menu__icon--40" src="./images/icones/agendar.png" alt="">
+				<p class="menu__caption menu-caption--highlight">Coletivar</p>
+			</a>
+			<a class="menu__item flex flex--column flex--align-center" href="./app-chat.html">
+				<div class="menu__icon--wrapper">
+					<img class="menu__icon" src="./images/icones/chat.png" alt="">
+				</div>
+			</a>
+			<a class="menu__item flex flex--column flex--align-center" href="./app-carteira.html">
+				<div class="menu__icon--wrapper">
+					<img class="menu__icon" src="./images/icones/carteira.png" alt="">
+				</div>
+			</a>
+		</div>
+	</div>
+
+
+	<!---------Início Scripts--------->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+		integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#tabs li a:not(:first)').addClass('inactive');
+			$('.tabs-section__screen').hide();
+			$('.tabs-section__screen:first').show();
+
+			$('#tabs li a').click(function () {
+				var t = $(this).attr('id');
+				if ($(this).hasClass('inactive')) {
+					$('#tabs li a').addClass('inactive');
+					$(this).removeClass('inactive');
+
+					$('.tabs-section__screen').hide();
+					$('#' + t + 'C').fadeIn('slow');
+				}
+			});
+
+			$('#searchbox').keydown(function (e) {
+				if (e.which === 13) {
+					window.location = "https://miayuyo.github.io/coletiva/login.html";
+				}
+			});
+
+			$('#homeMenu').click(function () {
+				mudaSlider();
+			});
+			$('#fecharLogin').click(function () {
+				mudaSlider();
+			});
+
+			function mudaSlider() {
+				if ($('.home-menu').hasClass('slide-down')) {
+					$('.home-menu').addClass('slide-up', 500);
+					$('.home-menu').removeClass('slide-down', 500);
+				} else {
+					$('.home-menu').toggleClass('slide-up', 500);
+					$('.home-menu').addClass('slide-down', 500);
+				}
+			}
+
+			$(function () {
+				$('#menuBtn').click(function (e) {
+					$('#menuContainer').addClass('slide-right', 800);
+					e.stopPropagation()
+				});
+				$(document).click(function (e) {
+					if ($(e.target).is("#menuContainer") === false) {
+						$('#menuContainer').removeClass('slide-right', 800);
+						e.stopPropagation()
+					}
+				});
+			});
+
+			function initMap() {
+				// The location of Uluru
+				var uluru = { lat: -25.344, lng: 131.036 };
+				// The map, centered at Uluru
+				var map = new google.maps.Map(
+					document.getElementById('map'), { zoom: 4, center: uluru });
+				// The marker, positioned at Uluru
+				var marker = new google.maps.Marker({ position: uluru, map: map });
+			}
+		});
+	</script>
+
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4J8DrZoHi63jtNMfPzwDrJyL56WWrv4A&callback=initMap">
+		</script>
+	<!---------Fim Scripts--------->
+</body>
+
+</html>

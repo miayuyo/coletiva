@@ -72,11 +72,11 @@ body {
     width: 300px;
     height: 100vh;
     margin-left: -350px;
-    background-color: #00e788;
+    background-color: #00E98F;
     position: absolute;
     z-index: 10000;
     padding: 32px 16px;
-    /* box-shadow: 0 0 40px rgba(0,0,0,1); */
+    box-shadow: 0 0 40px rgba(0,0,0,.15);
 }
 
 .menu-perfil {
@@ -97,7 +97,10 @@ body {
 }
 
 .menu {
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     padding: 0 16px;
     background-color: #fff;
     box-shadow: 0 0 15px rgba(0,0,0,.075);
@@ -107,7 +110,22 @@ body {
 
 .home-menu {
     background-color: #e6e6e6;
-    padding: 0 16px 16px;
+    padding: 0 16px 100px;
+}
+
+/*----- APP RANKING -----*/
+.header {
+    height: 60px;
+    background-color: #fff;
+    padding: 17px 16px;
+    text-align: center;
+}
+
+.ranking-section {
+}
+
+.top-ranking {
+    margin-bottom: 40px;
 }
 
 /*----- MEDIA QUERY -----*/

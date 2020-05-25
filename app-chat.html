@@ -14,7 +14,7 @@
 
 <body class="body" id="fadeIn">
 
-	<div class="container flex flex--column flex--justify-between">
+	<div class="container flex flex--column">
 		<div class="menu-top" id="menuBtn">
 			<img class="menu-top__button" src="./images/icones/menu.png" alt="">
 		</div>
@@ -53,44 +53,12 @@
 		</div>
 		<!---------Fim Menu Lateral--------->
 
-		<div class="map">
+		<div class="header flex flex--align-center flex--justify-center">
+			<p class="size--18 weight--medium">Chat</p>
 		</div>
 
-		<div class="home-menu">
-			<button class="home-menu__dropdown" id="homeMenu"><span class="home-menu__line"></span></button>
-			<div class="home-menu__top flex flex--align-center flex--justify-between">
-				<div class="home-menu__block">
-					<p class="size--20">Olá, <span class="weight--medium">Tiago</span>!</p>
-				</div>
-				<div class="home-menu__block flex flex--align-center">
-					<img class="home-menu__level" src="./images/icones/nivel-master.png" alt="">
-					<p class="size--20">Nível <span class="weight--medium">Mestre</span></p>
-				</div>
-			</div>
-			<div class="home-menu__content">
-				<div class="searchbox-wrapper">
-					<input class="searchbox" type="text" name="" id="searchbox" placeholder="O que você quer descartar hoje?">
-					<img class="searchbox__icon" src="./images/icones/avancar-bit-white.png" alt="">
-				</div>
-				<p class="weight--bold size--20 mb-10">Meus favoritos</p>
-				<a class="home-menu__option flex flex--align-center flex--justify-between" href="#">
-					<img class="home-menu__icon" src="./images/icones/favorito-cooperativa.png" alt="">
-					<div class="home-menu__info">
-						<p class="size--18 weight--medium">Cooperativa Cidade Verde</p>
-						<p class="home-menu__address size--16">Rua das Sucatas, 123 - Sucatolândia, São Paulo</p>
-					</div>
-				</a>
-
-				<div class="hr"></div>
-
-				<a class="home-menu__option flex flex--align-center flex--justify-between" href="#">
-					<img class="home-menu__icon" src="./images/icones/favorito-catador.png" alt="">
-					<div class="home-menu__info">
-						<p class="size--18 weight--medium">Inácio da Silva</p>
-						<p class="home-menu__address size--16">Rua das Sucatas, 456 - Sucatolândia, São Paulo</p>
-					</div>
-				</a>
-			</div>
+		<div>
+			<h1>olar</h1>
 		</div>
 
 		<div class="menu flex flex--align-center flex--justify-between">
@@ -121,6 +89,7 @@
 		</div>
 	</div>
 
+
 	<!---------Início Scripts--------->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -129,6 +98,21 @@
 	<script src="js/main.js"></script>
 	<script>
 		$(document).ready(function () {
+			$('#tabs li a:not(:first)').addClass('inactive');
+			$('.tabs-section__screen').hide();
+			$('.tabs-section__screen:first').show();
+
+			$('#tabs li a').click(function () {
+				var t = $(this).attr('id');
+				if ($(this).hasClass('inactive')) {
+					$('#tabs li a').addClass('inactive');
+					$(this).removeClass('inactive');
+
+					$('.tabs-section__screen').hide();
+					$('#' + t + 'C').fadeIn('slow');
+				}
+			});
+
 			$('#searchbox').keydown(function (e) {
 				if (e.which === 13) {
 					window.location = "https://miayuyo.github.io/coletiva/login.html";

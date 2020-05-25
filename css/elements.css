@@ -365,10 +365,6 @@
     margin: 0 auto;
 }
 
-.menu-perfil__info {
-
-}
-
 .menu-perfil__block {
     text-align: center;
 }
@@ -508,4 +504,98 @@
     max-width: 275px;
     display: block;
     overflow: hidden;
+}
+
+/*----- APP RANKING -----*/
+.tabs li {
+    flex: 1;
+    text-align: center;
+}
+
+.tabs__item {
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    color: #222;
+    border-bottom: 5px solid #00E98F;
+}
+
+.tabs__item.inactive {
+    border-bottom-color: transparent;
+}
+
+.tabs-section__screen {
+  width: 100%;
+  text-align: center;
+  padding: 16px 16px 115px;
+}
+
+.top-ranking__block {
+    display: block;
+}
+
+.top-ranking__photo {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    position: relative;
+}
+
+.top-ranking__nivel {
+    position: absolute;
+    max-width: 75px;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.ranking-name {
+    font-weight: 500;
+}
+
+.ranking-pr {
+    font-size: 12px;
+    color: #5e5e5e;
+}
+
+.ranking-number {
+    font-weight: 700;
+    color: #00547a;
+}
+
+.ranking-pr span {
+    font-size: 16px;
+    color: #00d361;
+    font-weight: 500;
+}
+
+.ranking__block {
+    text-decoration: none;
+    color: #222;
+}
+
+.ranking__position {
+    width: 20px;
+    text-align: left;
+    margin-right: 15px;
+}
+
+.ranking__photo {
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    border-radius: 50%;
+    margin-right: 15px;
+    position: relative;
+}
+
+.ranking__nivel {
+    position: absolute;
+    width: 40px;
+    display: block;
+    margin: 0 auto;
+    bottom: -5px;
 }
