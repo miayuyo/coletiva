@@ -53,20 +53,100 @@
 		<!---------Fim Menu Lateral--------->
 
 		<div class="header flex flex--align-center flex--justify-center">
-			<p class="size--18 weight--medium">Coletivar</p>
+			<p class="size--18 weight--medium">Perfil</p>
 		</div>
 
-		<div class="content-container container--fullheight flex flex--column flex--justify-center p-16">
-			<p class="txt--center size--20 weight--bold mb-10">Agende sua coleta</p>
-			<img class="coletivar__icon" src="./images/icones/coletivar-agendar.png" alt="">
-			<p class="txt--center mb-16">Escolha a melhor data e horário disponível para a entrega do seu lixo reciclável</p>
-			<a class="button bottom__button--primario mt-20 mb-20" href="./app-agendar-1.html">Agendar</a>
-			<div class="hr"></div>
+		<div class="header-buttons flex flex--justify-between pt-20">
+			<div class="header-buttons__block">
+				<a class="back-button" href="javascript: history.go(-1)">
+					<div class="back-button-content flex flex--align-center">
+						<img class="back-button-icon" src="./images/icones/voltar.png" alt="Ícone apontando para a esquerda">
+						<p class="back-button-text">Voltar</p>
+					</div>
+				</a>
+			</div>
 
-			<p class="txt--center size--20 weight--bold mt-15 mb-10">Consulte o agendamento</p>
-			<img class="coletivar__icon" src="./images/icones/coletivar-agenda.png" alt="">
-			<p class="txt--center mb-16">Os agendamentos ficam em aberto até que você confirme ou cancele a entrega</p>
-			<a class="button bottom__button--secundario mt-20" href="./app-consultar.html">Consultar</a>
+			<div class="header-buttons__block">
+				<a class="back-button" href="#">
+					<div class="back-button-content flex flex--align-center">
+						<img class="back-button-icon" src="./images/icones/reportar.png" alt="Ícone apontando para a esquerda">
+						<p class="back-button-text">Reportar</p>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="content-container p-16">
+			<div class="profile-info">	
+				<div class="profile-label flex flex--align-center flex--justify-center">
+					<img class="profile-label__icon" src="./images/icones/profile-catador.png" alt="">
+					<p class="size--16">Catador Associado</p>
+				</div>	
+				<div class="profile-info__photo profile-info__photo--catador2">		
+				</div>		
+				
+				<p class="txt--center size--20 weight--medium mb-5">Inácio da S.</p>
+				<p class="txt--center size--14 color--gray">Rua das Sucatas, 456, Sucatolândia<br> São Paulo / SP</p>
+				<div class="profile-favorite">
+					<a class="back-button txt--center" href="#">
+						<div class="back-button-content flex flex--align-center">
+							<img class="back-button-icon" src="./images/icones/favoritar.png" alt="Ícone apontando para a esquerda">
+							<p class="back-button-text weight--medium">Favoritar</p>
+						</div>
+					</a>
+				</div>
+			</div>		
+
+			<div class="profile-medals flex flex--justify-around">
+				<div class="profile-medals__item">
+					<img class="profile-medals__icon" src="./images/icones/medalha-estrela.png" alt="">
+					<p class="weight--medium">Rank #<span class="ranking-highlight">1</span></p>
+					<p class="ranking-pr"><span>12345</span> PR</p>
+				</div>
+				<div class="profile-medals__item">
+					<img class="profile-medals__icon" src="./images/icones/medalha-estrela.png" alt="">
+					<p class="weight--medium">Doações</p>
+					<p class="ranking-pr"><span>1234</span> x</p>
+				</div>
+				<div class="profile-medals__item">
+					<img class="profile-medals__icon" src="./images/icones/medalha-estrela.png" alt="">
+					<p class="weight--medium">Ativo</p>
+					<p class="ranking-pr">há 9 meses</p>
+				</div>
+			</div>
+			<div class="hr-40"></div>
+
+			<p class="txt--center size--20 weight--medium">Materiais que aceita</p>
+			<div class="profile-medals flex flex--justify-around flex--wrap">
+				<div class="profile-medals__item">
+					<img class="profile-medals__icon" src="./images/icones/lixo-plastico.png" alt="">
+					<p class="size--12">Plástico</p>
+				</div>
+				<div class="profile-medals__item">
+					<img class="profile-medals__icon" src="./images/icones/lixo-metal.png" alt="">
+					<p class="size--12">Metal</p>
+				</div>
+				<div class="profile-medals__item">
+					<img class="profile-medals__icon" src="./images/icones/lixo-bateria.png" alt="">
+					<p class="size--12">Bateria</p>
+				</div>
+				<div class="profile-medals__item">
+					<img class="profile-medals__icon" src="./images/icones/lixo-vidro.png" alt="">
+					<p class="size--12">Vidro</p>
+				</div>
+			</div>
+			<div class="hr-40"></div>
+
+			<div class="profile-contact">
+				<a class="profile-contact__option flex flex--align-center mb-10" href="#">
+					<img class="profile-contact__icon" src="./images/icones/mensagens.png" alt="">
+					<p class="weight--medium">Enviar mensagem</p>
+				</a>					
+				<a class="profile-contact__option flex flex--align-center" href="#">
+					<img class="profile-contact__icon" src="./images/icones/ligar.png" alt="">
+					<p class="weight--medium">Ligar</p>
+				</a>
+			</div>
 		</div>
 
 		<div class="menu flex flex--align-center flex--justify-between">

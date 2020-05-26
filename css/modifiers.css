@@ -6,6 +6,10 @@
     flex-flow: column;
 }
 
+.flex--wrap {
+    flex-wrap: wrap;
+}
+
 .flex--align-center {
     align-items: center;
 }
@@ -28,6 +32,10 @@
 
 .flex--justify-around {
     justify-content: space-around;
+}
+
+.container--fullheight {
+    height: 100vh;
 }
 
 .container--inicial {

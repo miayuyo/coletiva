@@ -15,22 +15,15 @@
 <body class="body flex flex--align-center flex--justify-center" id="fadeIn">
 	<div class="desktop-message flex flex--align-center flex--justify-center">
 		<p class="desktop-message__text">Para visualizar este projeto, abra em um dispositivo mobile ou, pelo desktop,
-			navegue no modo <span>Inspecionar</span> e selecione um modelo de celular.</p>
+			navegue no modo <span>Inspecionar (Ctrl+Shift+i)</span> e selecione um modelo de celular.</p>
 	</div>
-	<!---------Início Loader--------->
-	<div class="loading flex flex--align-center flex--justify-center" id="loading">
-		<div class="logo">
-			<img class="logo__loading" src="./images/logo-coletiva.png" alt="Coletiva">
-		</div>
-	</div>
-	<!---------Fim Loader--------->
 
 	<div class="container container--inicial flex flex--column flex--justify-center">
 		<div class="logo">
-			<img class="logo__inicial" src="./images/logo-coletiva.png" alt="Coletiva">
+			<img class="logo__inicial" src="./images/logo-entrada.gif" alt="Coletiva">
 		</div>
-		<a class="bottom__button bottom__button--secundario" href="./login.html">Entrar</a>
-		<a class="bottom__button bottom__button--primario" href="./cadastro.html">Fazer cadastro</a>		
+		<a class="button__login bottom__button--secundario" href="./login.html">Entrar</a>
+		<a class="button__login bottom__button--primario" href="./cadastro.html">Fazer cadastro</a>		
 	</div>
 
 	<ul class="circles">
@@ -52,11 +45,6 @@
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
 		integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 	<script src="./js/main.js"></script>
-	<script>
-		$(document).ready(function () {
-			$('#loading').fadeIn('slow').delay(3000).fadeOut('slow');	
-		});
-	</script>
 	<!---------Fim Scripts--------->
 </body>
 

@@ -128,6 +128,29 @@ body {
     margin-bottom: 40px;
 }
 
+/*----- APP PROFILE -----*/
+.content-container {
+	padding-bottom: 115px;
+}
+
+.profile-info {
+	margin-bottom: 25px;
+}
+
+.profile-label {
+	margin: 10px auto;
+}
+
+.profile-medals {
+	margin-top: 35px;
+}
+
+.profile-favorite {
+	max-width: 120px;
+    display: block;
+    margin: 15px auto;
+}
+
 /*----- MEDIA QUERY -----*/
 
 @media (min-width: 960px) {
@@ -152,4 +175,11 @@ body {
     .desktop-message {
         display: none;
     } 
+}
+
+@media (max-height: 640px) {
+	.container--fullheight {
+		height: unset !important;
+		padding: 30px 16px 115px !important;
+	}
 }
