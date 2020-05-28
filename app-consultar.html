@@ -56,8 +56,73 @@
 			<p class="size--18 weight--medium">Consultar</p>
 		</div>
 
+		<div class="header-buttons flex flex--column pt-20">
+			<div class="header-buttons__block">
+				<a class="back-button" href="javascript: history.go(-1)">
+					<div class="back-button-content flex flex--align-center mb-30">
+						<img class="back-button-icon" src="./images/icones/voltar.png" alt="Ícone apontando para a esquerda">
+						<p class="back-button-text">Voltar</p>
+					</div>
+				</a>
+			</div>
+			<div class="header-legendas p-16 flex flex--align-center flex--justify-between">
+				<div class="flex flex--align-center">
+					<span class="legenda legenda--aguardando"></span> <p class="size--14">Aguardando</p>
+				</div>
+				<div class="flex flex--align-center">
+					<span class="legenda legenda--confirmado"></span> <p class="size--14">Confirmado</p>
+				</div>
+				<div class="flex flex--align-center">
+					<span class="legenda legenda--cancelado"></span> <p class="size--14">Cancelado</p>
+				</div>
+			</div>
+		</div>
+
 		<div class="content-container p-16">
-			<h1>ola</h1>
+			<div class="agendamento-card agendamento-card--aguardando">
+				<div class="agendamento-card__header">
+					<p class="size--18 weight--medium mb-5">Agendamento <b>#003</b></p>
+				</div>
+				<div class="agendamento-card__content">
+					<p class="mb-5">Com <span class="weight--medium">Inácio da Silva</span> (<a class="text-header__link" href="./app-profile-catador2.html">ver contato</a>)</p>
+					<p class="mb-5">No dia <span class="weight--medium">15/06/2020</span> (seg)</p>
+					<p>Às <span class="weight--medium">14:30</span> h</p>
+				</div>
+				<div class="agendamento-card__footer flex flex--align-center flex--justify-between">
+					<a class="button bottom__button--primario mt-20" href="./app-consultar-1-confirmar.html">Confirmar</a>
+					<a class="button bottom__button--cancelar mt-20" id="btnAgendar">Cancelar</a>
+				</div>
+			</div>
+
+			<div class="agendamento-card agendamento-card--confirmado">
+				<div class="agendamento-card__header">
+					<p class="size--18 weight--medium mb-5">Agendamento <b>#002</b></p>
+				</div>
+				<div class="agendamento-card__content">
+					<p class="mb-5">Com <span class="weight--medium">Cooperativa BeGreen</span> (<a class="text-header__link" href="./app-profile-cooperativa2.html">ver contato</a>)</p>
+					<p class="mb-5">No dia <span class="weight--medium">01/05/2020</span> (sex)</p>
+					<p>Às <span class="weight--medium">8:45</span> h</p>
+				</div>
+				<div class="agendamento-card__footer flex flex--align-center flex--justify-center mt-10">
+					<p>Entrega realizada!</p>
+					<img class="agendamento-card__icon-concluido" src="./images/icones/shining.jpg" alt="">
+				</div>
+			</div>
+
+			<div class="agendamento-card agendamento-card--cancelado">
+				<div class="agendamento-card__header">
+					<p class="size--18 weight--medium mb-5">Agendamento <b>#001</b></p>
+				</div>
+				<div class="agendamento-card__content">
+					<p class="mb-5">Com <span class="weight--medium">Roberto Carlos</span> (<a class="text-header__link" href="./app-profile-catador1.html">ver contato</a>)</p>
+					<p class="mb-5">No dia <span class="weight--medium">26/04/2020</span> (dom)</p>
+					<p>Às <span class="weight--medium">11:00</span> h</p>
+				</div>
+				<div class="agendamento-card__footer flex flex--align-center flex--justify-center mt-10">
+					<p>Entrega cancelada</p>
+					<img class="agendamento-card__icon-cancelado" src="./images/icones/sad.png" alt="">
+				</div>
+			</div>
 		</div>
 
 		<div class="menu flex flex--align-center flex--justify-between">
@@ -86,6 +151,20 @@
 				</div>
 			</a>
 		</div>
+
+		<div class="modal-overlay" id="modal">
+			<div class="modal-body">
+				<span class="modal-close" id="fecharModal"><img src="./images/icones/close.png" alt=""></span>
+				<div class="modal-header">
+					<p class="size--20 txt--center">Tem certeza que deseja cancelar?</p>
+				</div>
+				<div class="modal-content flex flex--align-center">
+					<a class="button bottom__button--cancelar mt-20" style="margin-right: 20px;" href="./app-consultar.html">Sim</a>
+					<a class="button bottom__button--primario mt-20" id="fecharModal2">Voltar</a>
+					</a>
+				</div>
+			</div>
+		</div>
 	</div>
 
 
@@ -97,44 +176,6 @@
 	<script src="js/main.js"></script>
 	<script>
 		$(document).ready(function () {
-			$('#tabs li a:not(:first)').addClass('inactive');
-			$('.tabs-section__screen').hide();
-			$('.tabs-section__screen:first').show();
-
-			$('#tabs li a').click(function () {
-				var t = $(this).attr('id');
-				if ($(this).hasClass('inactive')) {
-					$('#tabs li a').addClass('inactive');
-					$(this).removeClass('inactive');
-
-					$('.tabs-section__screen').hide();
-					$('#' + t + 'C').fadeIn('slow');
-				}
-			});
-
-			$('#searchbox').keydown(function (e) {
-				if (e.which === 13) {
-					window.location = "https://miayuyo.github.io/coletiva/login.html";
-				}
-			});
-
-			$('#homeMenu').click(function () {
-				mudaSlider();
-			});
-			$('#fecharLogin').click(function () {
-				mudaSlider();
-			});
-
-			function mudaSlider() {
-				if ($('.home-menu').hasClass('slide-down')) {
-					$('.home-menu').addClass('slide-up', 500);
-					$('.home-menu').removeClass('slide-down', 500);
-				} else {
-					$('.home-menu').toggleClass('slide-up', 500);
-					$('.home-menu').addClass('slide-down', 500);
-				}
-			}
-
 			$(function () {
 				$('#menuBtn').click(function (e) {
 					$('#menuContainer').addClass('slide-right', 800);
@@ -147,22 +188,8 @@
 					}
 				});
 			});
-
-			function initMap() {
-				// The location of Uluru
-				var uluru = { lat: -25.344, lng: 131.036 };
-				// The map, centered at Uluru
-				var map = new google.maps.Map(
-					document.getElementById('map'), { zoom: 4, center: uluru });
-				// The marker, positioned at Uluru
-				var marker = new google.maps.Marker({ position: uluru, map: map });
-			}
 		});
 	</script>
-
-	<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4J8DrZoHi63jtNMfPzwDrJyL56WWrv4A&callback=initMap">
-		</script>
 	<!---------Fim Scripts--------->
 </body>
 

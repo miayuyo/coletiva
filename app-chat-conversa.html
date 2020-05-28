@@ -20,6 +20,7 @@
 		</div>
 
 		<!---------Menu Lateral--------->
+		<!-- <div class="menu-top-overlay"></div> -->
 		<div class="menu-top-container" id="menuContainer">
 			<div class="menu-perfil">
 				<div class="menu-perfil__foto">
@@ -53,13 +54,13 @@
 		<!---------Fim Menu Lateral--------->
 
 		<div class="header flex flex--align-center flex--justify-center">
-			<p class="size--18 weight--medium">Agendar</p>
+			<p class="size--18 weight--medium">Chat</p>
 		</div>
 
-		<div class="header-buttons flex pt-20 mb-30">
+		<div class="header-buttons flex flex--column pt-20">
 			<div class="header-buttons__block">
 				<a class="back-button" href="javascript: history.go(-1)">
-					<div class="back-button-content flex flex--align-center">
+					<div class="back-button-content flex flex--align-center mb-30">
 						<img class="back-button-icon" src="./images/icones/voltar.png" alt="Ícone apontando para a esquerda">
 						<p class="back-button-text">Voltar</p>
 					</div>
@@ -67,28 +68,43 @@
 			</div>
 		</div>
 
-		<div class="content-container p-16">
-			<p class="txt--center mb-30">Resultados mais próximos de você:</p>
-
-			<div class="resultados">
-				<a class="home-menu__option flex flex--align-center flex--justify-between" href="./app-agendar-4-cooperativa.html">
-					<img class="home-menu__icon" src="./images/icones/profile-cooperativa.png" alt="">
-					<div class="home-menu__info">
-						<p class="size--18 weight--medium">Cooperativa Cidade Verde</p>
-						<p class="home-menu__address size--16">Rua das Sucatas, 123 - Sucatolândia, São Paulo</p>
+		<div class="chat">
+			<a class="chat__block flex flex--align-center flex--justify-between" href="./app-profile-cooperativa1.html">
+				<div class=" flex flex--align-center">
+					<div class="chat__avatar chat__avatar-coop">					
 					</div>
-				</a>
-
-				<div class="hr"></div>
-
-				<a class="home-menu__option flex flex--align-center flex--justify-between" href="./app-agendar-4-catador.html">
-					<img class="home-menu__icon" src="./images/icones/profile-catador.png" alt="">
-					<div class="home-menu__info">
-						<p class="size--18 weight--medium">Inácio da Silva</p>
-						<p class="home-menu__address size--16">Rua das Sucatas, 456 - Sucatolândia, São Paulo</p>
+					<div>
+						<p class="size--20 weight--medium mb-5">Cooperativa Cidade Verde</p>						
+						<p class="size--12 color--gray">Última vez online há 3 horas</p>
 					</div>
-				</a>
+				</div>
+			</a>
+			<div class="hr">			
 			</div>
+			<div class="chat__gerador">
+				<div class="chat__gerador-balao mb-5">
+					<p>Oi! Quero entregar algumas sucatas para vocês. Qual o melhor dia e horário?</p>
+				</div>
+				<p class="size--12 color--gray">Há 5 horas</p>
+			</div>
+			<div class="chat__catador">
+				<div class="chat__calador-balao flex flex--align-center mb-5">
+					<div class="chat__avatar-balao chat__avatar-coop">						
+					</div>
+					<p>Olá, pode ser amanhã?</p>
+				</div>
+				<p class="size--12 color--gray">Há 15 minutos</p>
+			</div>
+			<div class="chat__gerador">
+				<div class="chat__gerador-balao mb-5">
+					<p>Pode ser sim! Qual o horário?</p>
+				</div>
+				<p class="size--12 color--gray">Há alguns segundos atrás</p>
+			</div>
+		</div>
+
+		<div class="chat__textarea p-16">
+			<textarea class="textarea" rows="5" placeholder="Digite sua mensagem"></textarea>
 		</div>
 
 		<div class="menu flex flex--align-center flex--justify-between">
@@ -102,8 +118,7 @@
 					<img class="menu__icon" src="./images/icones/ranking.png" alt="">
 				</div>
 			</a>
-			<a class="menu__item menu__main-item flex flex--column flex--align-center flex--justify-center"
-				href="./app-coletivar.html">
+			<a class="menu__item menu__main-item flex flex--column flex--align-center flex--justify-center" href="./app-coletivar.html">
 				<img class="menu__icon menu__icon--40" src="./images/icones/agendar.png" alt="">
 				<p class="menu__caption menu-caption--highlight">Coletivar</p>
 			</a>
