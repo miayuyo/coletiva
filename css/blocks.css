@@ -92,8 +92,10 @@ body {
     height: 100%;
     width: 100%;
     display: block;
-    /* position: absolute;
-    z-index: -1; */
+    background-image: url('../images/maps.jpg');
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .menu {
@@ -149,6 +151,101 @@ body {
 	max-width: 120px;
     display: block;
     margin: 15px auto;
+}
+
+/*----- APP AGENDAMENTO -----*/
+.agendamento-card {
+    background-color: #fff;
+    padding: 15px 15px 24px;
+    border-left: 5px solid;
+}
+
+.agendamento-card--aguardando {
+    border-color: #ffd900;
+}
+
+.agendamento-card--confirmado {
+    border-color: #00ea90;
+}
+
+.agendamento-card--cancelado {
+    border-color: #ff1260;
+}
+
+.legenda {
+    display: block;
+    margin-right: 5px;
+    width: 13px;
+    height: 13px;
+    border: 3px solid #222;
+    flex-shrink: 0;
+}
+
+.legenda--aguardando {
+    background-color: #ffd900;
+}
+
+.legenda--confirmado {
+    background-color: #00ea90;
+}
+
+.legenda--cancelado {
+    background-color: #ff1260;
+}
+
+.textarea {
+    width: 100%;
+    font-size: 16px;
+    border: 0;
+    outline: 0;
+    padding: 16px;
+    font-family: 'Rubik', sans-serif;
+    border-radius: 10px;
+    color: #222;
+}
+
+/*----- MODAL -----*/
+.modal-overlay {
+    position: fixed;
+    background-color: rgba(0,0,0,.7);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 998;
+    display: none;
+}
+
+.modal-body {
+    position: relative;
+    background-color: #f4f4f4;
+    width: 90%;
+    padding: 15px 20px;
+    display: block;
+    margin: 55% auto 0;
+    border-bottom: 5px solid #00E98F;
+}
+
+.modal-close {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.modal-close img {
+    display: block;
+    width: 100%;
+}
+
+.modal-header {
+    margin: 20px auto;
+}
+
+.modal-content {
+    margin-bottom: 10px;
 }
 
 /*----- MEDIA QUERY -----*/

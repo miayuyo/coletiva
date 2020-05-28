@@ -9,6 +9,7 @@
 
 body {
     font-family: 'Rubik', sans-serif;
+    position: relative;
 }
 
 ul li {
@@ -81,8 +82,16 @@ ul li {
     margin-top: 40px;
 }
 
+.mt-50 {
+    margin-top: 50px;
+}
+
 .mr-25per {
     margin-right: 25%;
+}
+
+.mr-20 {
+    margin-right: 20px;
 }
 
 .ml-25per {
@@ -164,6 +173,10 @@ ul li {
 
 .color--gray {
     color: #5d5d5d;
+}
+
+.color--green {
+    color: #00E98F;
 }
 
 /*--------- Efeitos ---------*/

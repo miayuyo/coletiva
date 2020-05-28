@@ -181,7 +181,8 @@
     padding: 10px 15px;
     transition: .3s ease;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 300;
+    font-family: 'Rubik', sans-serif;
 }
 
 .form__input:disabled~.form__label {
@@ -395,6 +396,10 @@
     margin: 0 auto 16px;
     border-radius: 50%;
     position: relative;
+    background-image: url('../images/foto/gerad-tiagom.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .menu-perfil__nivel {
@@ -777,4 +782,111 @@
 .points-label {
     font-size: 12px;
     font-weight: 300;
+}
+
+/*----- AGENDAMENTO -----*/
+.agendamento-card {
+    margin-bottom: 16px;
+    box-shadow: 0 0 15px rgba(0,0,0,.075);
+}
+
+.agendamento-card__icon-cancelado {
+    max-width: 25px;
+    margin-left: 5px;
+}
+
+.agendamento-card__icon-concluido {
+    max-width: 40px;
+    margin-left: 5px;
+}
+
+.agendamento-card__footer .button {
+    padding: 8px;
+    width: 130px;
+}
+
+.avaliar-img {
+    display: block;
+    margin: 30px auto;
+    max-width: 220px;
+}
+
+.avaliar-estrelas {
+    max-width: 190px;
+    margin: 0 auto;
+}
+
+.avaliar-estrelas img {
+    display: block;
+    width: 30px;
+}
+
+/*----- CHAT -----*/
+.chat {
+    padding: 0 16px;
+} 
+.chat__block {
+    text-decoration: none;
+    color: #222;
+}
+.chat__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #666;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.chat__avatar-catad {
+    background-image: url('../images/foto/catad-inacio.jpg');  
+}
+
+.chat__avancar {
+    width: 10px;
+}
+
+.chat__avatar-balao {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #666;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    margin-right: 5px;
+}
+
+.chat__avatar-coop {
+    background-image: url('../images/foto/coop-cidadeverde.jpg');  
+}
+
+.chat__gerador {
+    text-align: right;
+    display: inline-block;
+    float: right;
+}
+
+.chat__gerador-balao {
+    background-color: #fff;
+    border-radius: 10px 10px 0 10px;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,.075);
+}
+
+.chat__catador {
+    display: inline-block;
+    padding: 15px 0;
+    float: left;
+}
+
+.chat__textarea {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    left: 0;
 }

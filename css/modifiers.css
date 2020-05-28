@@ -72,6 +72,21 @@
     box-shadow: inset 4px 4px #083958;
 }
 
+.bottom__button--cancelar {
+    color: #fff;
+    background-color: #ff3e84;
+    box-shadow: inset -4px -4px #ff1260;
+}
+
+.bottom__button--cancelar:hover, .bottom__button--cancelar:focus {
+  background-color: #ff3e84;
+  box-shadow: inset -6px -6px #ff1260;
+}
+
+.bottom__button--cancelar:active {
+    box-shadow: inset 4px 4px #ff1260;
+}
+
 .bottom__text--small {
     font-size: 12px;
 }
