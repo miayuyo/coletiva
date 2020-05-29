@@ -50,27 +50,23 @@
 		<!---------Fim Menu Lateral--------->
 
 		<div class="header flex flex--align-center flex--justify-center">
-			<p class="size--18 weight--medium">Carteira</p>
+			<p class="size--18 weight--medium">Sobre a Coletiva</p>
 		</div>
 
-		<div class="carteira-header flex flex--align-center flex--justify-center">
-			<div class="carteira-header__conta">
-				<p class="size--12 mb-5">Saldo total</p>
-				<p class="size--28">R$ <span class="weight--bold">0,50</span></p>
-				<a class="button bottom__button--cancelar mt-20" href="./app-carteira.html">Cancelar</a>
-			</div>			
-		</div>
-
-		<div class="carteira-pagar-content">
-			<p class="weight--medium txt--center">Mostre o código de barras no caixa</p>
-			<p class="size--12 txt--center">Verifique se a loja é uma de nossas parceiras</p>
-			<div class="carteira-pagar-bars flex flex--column flex--align-center flex--justify-center">
-				<p class="size--12 txt--center mb-10 color--gray">Código de barras</p>
-				<a href="./app-carteira-pagar-senha.html"><img class="barcode" src="./images/barcode.png"></a>
-				<br>
-				<p class="size--12 txt--center mb-10 color--gray">QR code</p>
-				<a href="./app-carteira-pagar-senha.html"><img class="qrcode" src="./images/qr-code.png" alt=""></a>
+		<div class="chat" style="padding-top: 16px; padding-bottom: 110px">
+			<img src="./images/logo-coletiva.png" alt="Logo da Coletiva" style="display: block; width: 120px; margin: 0 auto 20px;">
+			<p>A <b>Coletiva</b> é um app de coleta consciente, que visa promover aos usuários a separação do lixo reciclável
+				para um bem maior à sociedade e ao meio-ambiente. Queremos, também, criar uma ponte facilitadora entre
+				os indivíduos com o objetivo de incentivar a coletividade entre os geradores de lixo, catadores de
+				reciclagem e os trabalhadores de cooperativas de reciclagem e, desta forma, engajar todos para um bem
+				comum: a coleta seletiva.</p>
+			<div class="video-wrapper">
+				<div class="video-frame">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/OasbYWF4_S8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 			</div>
+			<div class="hr"></div>
+			<p class="size--12"><b>CLÁUSULA DE RESERVA (Lei 9.610/98 - LEI DE DIREITOS AUTORAIS)</b>: Este aplicativofoi publicado e é mantido pelos discentes do 5º semestre, do Curso de Graduação emDesign Digital, da Universidade Anhembi Morumbi, visando a atender às exigências dadisciplina PROJETO INTERDISCIPLINAR: CIBERATIVISMO. Trata-se de uma publicaçãotemporária para propósitos estritamente acadêmicos e sem fins lucrativos. Em atendimentoàs exigências da Lei 9.610/98, do parágrafo 4°, do Artigo 184, do Código Penal, os discentesresponsáveis por esta publicação colocam-se à disposição, por intermédio do e-mail (<a class="color--green" href="mailto:michelle.yoshitani@gmail.com">michelle.yoshitani@gmail.com</a>), para dirimir quaisquer dúvidas referentes à eventual violação de direitosautorais, comprometendo-se desde já, a retirar do ar, qualquer texto, som ou imagempertencente a autor ou titular que se sinta direta ou indiretamente prejudicado.</p>
 		</div>
 
 		<div class="menu flex flex--align-center flex--justify-between">
@@ -84,7 +80,8 @@
 					<img class="menu__icon" src="./images/icones/ranking.png" alt="">
 				</div>
 			</a>
-			<a class="menu__item menu__main-item flex flex--column flex--align-center flex--justify-center" href="./app-coletivar.html">
+			<a class="menu__item menu__main-item flex flex--column flex--align-center flex--justify-center"
+				href="./app-coletivar.html">
 				<img class="menu__icon menu__icon--40" src="./images/icones/agendar.png" alt="">
 				<p class="menu__caption menu-caption--highlight">Coletivar</p>
 			</a>
@@ -109,9 +106,32 @@
 		integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
 	<script>
-		$(document).ready(function () {	
+		$(document).ready(function () {
+			$('#tabs li a:not(:first)').addClass('inactive');
+			$('.tabs-section__screen').hide();
+			$('.tabs-section__screen:first').show();
+
+			$('#tabs li a').click(function () {
+				var t = $(this).attr('id');
+				if ($(this).hasClass('inactive')) {
+					$('#tabs li a').addClass('inactive');
+					$(this).removeClass('inactive');
+
+					$('.tabs-section__screen').hide();
+					$('#' + t + 'C').fadeIn('slow');
+				}
+			});
+
+			$('#searchbox').keydown(function (e) {
+				if (e.which === 13) {
+					window.location = "https://miayuyo.github.io/coletiva/login.html";
+				}
+			});
 
 			$('#homeMenu').click(function () {
+				mudaSlider();
+			});
+			$('#fecharLogin').click(function () {
 				mudaSlider();
 			});
 
@@ -137,8 +157,22 @@
 					}
 				});
 			});
+
+			function initMap() {
+				// The location of Uluru
+				var uluru = { lat: -25.344, lng: 131.036 };
+				// The map, centered at Uluru
+				var map = new google.maps.Map(
+					document.getElementById('map'), { zoom: 4, center: uluru });
+				// The marker, positioned at Uluru
+				var marker = new google.maps.Marker({ position: uluru, map: map });
+			}
 		});
 	</script>
+
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4J8DrZoHi63jtNMfPzwDrJyL56WWrv4A&callback=initMap">
+		</script>
 	<!---------Fim Scripts--------->
 </body>
 

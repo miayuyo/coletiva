@@ -50,27 +50,20 @@
 		<!---------Fim Menu Lateral--------->
 
 		<div class="header flex flex--align-center flex--justify-center">
-			<p class="size--18 weight--medium">Carteira</p>
+			<p class="size--18 weight--medium">Separação do lixo</p>
 		</div>
 
-		<div class="carteira-header flex flex--align-center flex--justify-center">
-			<div class="carteira-header__conta">
-				<p class="size--12 mb-5">Saldo total</p>
-				<p class="size--28">R$ <span class="weight--bold">0,50</span></p>
-				<a class="button bottom__button--cancelar mt-20" href="./app-carteira.html">Cancelar</a>
-			</div>			
-		</div>
-
-		<div class="carteira-pagar-content">
-			<p class="weight--medium txt--center">Mostre o código de barras no caixa</p>
-			<p class="size--12 txt--center">Verifique se a loja é uma de nossas parceiras</p>
-			<div class="carteira-pagar-bars flex flex--column flex--align-center flex--justify-center">
-				<p class="size--12 txt--center mb-10 color--gray">Código de barras</p>
-				<a href="./app-carteira-pagar-senha.html"><img class="barcode" src="./images/barcode.png"></a>
-				<br>
-				<p class="size--12 txt--center mb-10 color--gray">QR code</p>
-				<a href="./app-carteira-pagar-senha.html"><img class="qrcode" src="./images/qr-code.png" alt=""></a>
-			</div>
+		<div class="chat" style="padding-top: 16px; padding-bottom: 110px">
+			<img src="./images/ilustracoes/gerador-05.png" alt="Logo da Coletiva" style="display: block; width: 230px; margin: 0 auto;">
+			<p><b>É possível ganhar descontos no mercado* com a Coletiva!</b></p>
+			<br>
+			<p>Cada vez que você doa um determinado tipo de lixo reciclável ao catador ou à associação de recicláveis, são gerados os PR: os nossos <b>pontos de reciclagem</b>. Os PRs obtidos também são convertidos em valor monetário e são possíveis de serem utilizados em mercados parceiros para obter desconto na hora do pagamento. Legal, né?</p>
+			<br>
+			<p>Para isso, é necessário que, após a entrega dos recicláveis ao catador ou a associação, confirme na tela de agendamentos a sua entrega! Após o catador também confirmar o recebimento, os PRs caem automaticamente na conta dos dois.</p>
+			<img src="./images/ilustracoes/gerador-02.png" alt="Logo da Coletiva" style="display: block; width: 230px; margin: 0 auto;">
+			<p>Cada 1 PR equivale ao valor de R$ 0,10. É importante ressaltar que existe um limite máximo de uso de 100 PRs na hora do pagamento lá no mercado, ok? O pagamento é feito através da leitura do código de barras gerado ou via QR code.</p>
+			<br>
+			<p class="size--12">*Procure no mapa pelos nossos mercados parceiros.</p>
 		</div>
 
 		<div class="menu flex flex--align-center flex--justify-between">
@@ -84,7 +77,8 @@
 					<img class="menu__icon" src="./images/icones/ranking.png" alt="">
 				</div>
 			</a>
-			<a class="menu__item menu__main-item flex flex--column flex--align-center flex--justify-center" href="./app-coletivar.html">
+			<a class="menu__item menu__main-item flex flex--column flex--align-center flex--justify-center"
+				href="./app-coletivar.html">
 				<img class="menu__icon menu__icon--40" src="./images/icones/agendar.png" alt="">
 				<p class="menu__caption menu-caption--highlight">Coletivar</p>
 			</a>
@@ -109,9 +103,32 @@
 		integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
 	<script>
-		$(document).ready(function () {	
+		$(document).ready(function () {
+			$('#tabs li a:not(:first)').addClass('inactive');
+			$('.tabs-section__screen').hide();
+			$('.tabs-section__screen:first').show();
+
+			$('#tabs li a').click(function () {
+				var t = $(this).attr('id');
+				if ($(this).hasClass('inactive')) {
+					$('#tabs li a').addClass('inactive');
+					$(this).removeClass('inactive');
+
+					$('.tabs-section__screen').hide();
+					$('#' + t + 'C').fadeIn('slow');
+				}
+			});
+
+			$('#searchbox').keydown(function (e) {
+				if (e.which === 13) {
+					window.location = "https://miayuyo.github.io/coletiva/login.html";
+				}
+			});
 
 			$('#homeMenu').click(function () {
+				mudaSlider();
+			});
+			$('#fecharLogin').click(function () {
 				mudaSlider();
 			});
 
@@ -137,8 +154,22 @@
 					}
 				});
 			});
+
+			function initMap() {
+				// The location of Uluru
+				var uluru = { lat: -25.344, lng: 131.036 };
+				// The map, centered at Uluru
+				var map = new google.maps.Map(
+					document.getElementById('map'), { zoom: 4, center: uluru });
+				// The marker, positioned at Uluru
+				var marker = new google.maps.Marker({ position: uluru, map: map });
+			}
 		});
 	</script>
+
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4J8DrZoHi63jtNMfPzwDrJyL56WWrv4A&callback=initMap">
+		</script>
 	<!---------Fim Scripts--------->
 </body>
 
