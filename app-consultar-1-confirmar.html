@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="./css/modifiers.css">
 </head>
 
-<body class="body" id="fadeIn">
+<body id="fadeIn">
 
 	<div class="container flex flex--column">
 		<div class="menu-top" id="menuBtn">
@@ -69,7 +69,9 @@
 
 		<div class="content-container p-16">
 			<p class="size--20 txt--center">Avalie o serviço de <span class="weight--medium">Inácio da Silva</span>!</p>
-			<img class="avaliar-img" src="" alt="">
+			<div class="image-container">
+				<img src="./images/ilustracoes/gerador-02.png" alt="">
+			</div>
 			<div class="avaliar-estrelas flex flex--align-center flex--justify-around">
 				<img src="./images/icones/estrela-vazia.png" alt="">
 				<img src="./images/icones/estrela-vazia.png" alt="">
@@ -108,20 +110,6 @@
 					<img class="menu__icon" src="./images/icones/carteira.png" alt="">
 				</div>
 			</a>
-		</div>
-
-		<div class="modal-overlay" id="modal">
-			<div class="modal-body">
-				<span class="modal-close" id="fecharModal"><img src="./images/icones/close.png" alt=""></span>
-				<div class="modal-header">
-					<p class="size--20 txt--center">Tem certeza que deseja cancelar?</p>
-				</div>
-				<div class="modal-content flex flex--align-center">
-					<a class="button bottom__button--cancelar mt-20" style="margin-right: 20px;" href="./app-consultar.html">Sim</a>
-					<a class="button bottom__button--primario mt-20" id="fecharModal2">Voltar</a>
-					</a>
-				</div>
-			</div>
 		</div>
 	</div>
 

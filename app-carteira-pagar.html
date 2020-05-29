@@ -61,68 +61,19 @@
 			<div class="carteira-header__conta">
 				<p class="size--12 mb-5">Saldo total</p>
 				<p class="size--28">R$ <span class="weight--bold">0,50</span></p>
-				<a class="button bottom__button--primario mt-20" href="./app-carteira-pagar.html">Pagar</a>
+				<a class="button bottom__button--cancelar mt-20" href="./app-carteira.html">Cancelar</a>
 			</div>			
 		</div>
 
-		<div class="carteira-content">
-			<ul class="tabs flex flex--align-center" id="tabs">
-				<li><a class="tabs__item weight--medium" id="tab1">Entrada</a></li>
-				<li><a class="tabs__item weight--medium" id="tab2">Saída</a></li>
-			</ul>
-
-			<div class="tabs-section__screen" id="tab1C">
-				<div class="carteira-movimento__item flex flex--justify-between">
-					<div class="flex">
-						<div class="carteira-movimento__esquerda">
-							<img class="carteira-movimento__icon" src="./images/icones/pontos-recebido.png" alt="">
-							<span class="line"></span>
-						</div>
-						<div class="carteira-movimento__detalhes">
-							<p class="size--16 weight--medium mb-5">PR recebido</p>
-							<p class="size--12 color--gray mb-5">5 PR (5 x R$ 0,10)</p>
-							<p class="size--12 weight--medium">R$ 0,50</p>
-						</div>
-					</div>
-					<div>
-						<p class="size--12 color--lightgray">20/ABR</p>
-					</div>
-				</div>
-				<div class="carteira-movimento__item flex flex--justify-between">
-					<div class="flex">
-						<div class="carteira-movimento__esquerda">
-							<img class="carteira-movimento__icon" src="./images/icones/pontos-recebido.png" alt="">
-							<span class="line"></span>
-						</div>
-						<div class="carteira-movimento__detalhes">
-							<p class="size--16 weight--medium mb-5">PR recebido</p>
-							<p class="size--12 color--gray mb-5">15 PR (15 x R$ 0,10)</p>
-							<p class="size--12 weight--medium">R$ 1,50</p>
-						</div>
-					</div>
-					<div>
-						<p class="size--12 color--lightgray">10/MAR</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="tabs-section__screen" id="tab2C">
-				<div class="carteira-movimento__item flex flex--justify-between">
-					<div class="flex">
-						<div class="carteira-movimento__esquerda">
-							<img class="carteira-movimento__icon" src="./images/icones/pontos-gastos.png" alt="">
-							<span class="line"></span>
-						</div>
-						<div class="carteira-movimento__detalhes">
-							<p class="size--16 weight--medium mb-5">Pagamento realizado</p>
-							<p class="size--12 color--gray mb-5">Mercado Fuxico</p>
-							<p class="size--12 weight--medium">R$ 1,50</p>
-						</div>
-					</div>
-					<div>
-						<p class="size--12 color--lightgray">15/MAR</p>
-					</div>
-				</div>
+		<div class="carteira-pagar-content">
+			<p class="weight--medium txt--center">Mostre o código de barras no caixa</p>
+			<p class="size--12 txt--center">Verifique se a loja é uma de nossas parceiras</p>
+			<div class="carteira-pagar-bars flex flex--column flex--align-center flex--justify-center">
+				<p class="size--12 txt--center mb-10 color--gray">Código de barras</p>
+				<a href="./app-carteira-pagar-senha.html"><img class="barcode" src="./images/barcode.png"></a>
+				<br>
+				<p class="size--12 txt--center mb-10 color--gray">QR code</p>
+				<a href="./app-carteira-pagar-senha.html"><img class="qrcode" src="./images/qr-code.png" alt=""></a>
 			</div>
 		</div>
 
@@ -162,32 +113,9 @@
 		integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
 	<script>
-		$(document).ready(function () {
-			$('#tabs li a:not(:first)').addClass('inactive');
-			$('.tabs-section__screen').hide();
-			$('.tabs-section__screen:first').show();
-
-			$('#tabs li a').click(function () {
-				var t = $(this).attr('id');
-				if ($(this).hasClass('inactive')) {
-					$('#tabs li a').addClass('inactive');
-					$(this).removeClass('inactive');
-
-					$('.tabs-section__screen').hide();
-					$('#' + t + 'C').fadeIn('slow');
-				}
-			});
-
-			$('#searchbox').keydown(function (e) {
-				if (e.which === 13) {
-					window.location = "https://miayuyo.github.io/coletiva/login.html";
-				}
-			});
+		$(document).ready(function () {	
 
 			$('#homeMenu').click(function () {
-				mudaSlider();
-			});
-			$('#fecharLogin').click(function () {
 				mudaSlider();
 			});
 

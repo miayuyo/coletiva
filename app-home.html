@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="./css/modifiers.css">
 </head>
 
-<body class="body" id="fadeIn">
+<body id="fadeIn">
 
 	<div class="container flex flex--column flex--justify-between">
 		<div class="menu-top" id="menuBtn">
@@ -31,18 +31,14 @@
 						<p class="size--20 weight--bold">Tiago M.</p>
 					</div>
 					<div class="menu-perfil__block">
-						<p>Rank #1</p>
+						<p>Rank <b>#1</b></p>
 						<p>12345 pontos</p>
 					</div>
 				</div>
 			</div>
 			<div class="menu-section">
 				<ul class="menu-section__list">
-					<li><a href="#">Meu perfil</a></li>
-					<li><a href="#">Histórico de Agendamentos</a></li>
-				</ul>
-				<div class="hr"></div>
-				<ul class="menu-section__list">
+					<li><a href="./app-profile-gerador1.html">Meu perfil</a></li>
 					<li><a href="#">Configurações</a></li>
 					<li><a href="#">Como funciona a Carteira</a></li>
 					<li><a href="#">Como separar o lixo corretamente</a></li>
@@ -54,6 +50,13 @@
 		<!---------Fim Menu Lateral--------->
 
 		<div class="map">
+			<div class="localizacao icone">
+				<img src="./images/icones/localizacao.png" alt="">
+			</div>
+
+			<div class="localizacao icone">
+				<img src="./images/icones/localizacao.png" alt="">
+			</div>
 		</div>
 
 		<div class="home-menu">
@@ -73,7 +76,7 @@
 					<img class="searchbox__icon" src="./images/icones/avancar-bit-white.png" alt="">
 				</div>
 				<p class="weight--bold size--20 mb-10">Meus favoritos</p>
-				<a class="home-menu__option flex flex--align-center flex--justify-between" href="#">
+				<a class="home-menu__option flex flex--align-center flex--justify-between" href="./app-profile-cooperativa1.html">
 					<img class="home-menu__icon" src="./images/icones/favorito-cooperativa.png" alt="">
 					<div class="home-menu__info">
 						<p class="size--18 weight--medium">Cooperativa Cidade Verde</p>
@@ -83,7 +86,7 @@
 
 				<div class="hr"></div>
 
-				<a class="home-menu__option flex flex--align-center flex--justify-between" href="#">
+				<a class="home-menu__option flex flex--align-center flex--justify-between" href="./app-profile-catador2.html">
 					<img class="home-menu__icon" src="./images/icones/favorito-catador.png" alt="">
 					<div class="home-menu__info">
 						<p class="size--18 weight--medium">Inácio da Silva</p>
@@ -138,9 +141,6 @@
 			$('#homeMenu').click(function () {
 				mudaSlider();
 			});
-			$('#fecharLogin').click(function () {
-				mudaSlider();
-			});
 
 			function mudaSlider() {
 				if ($('.home-menu').hasClass('slide-down')) {
@@ -164,22 +164,8 @@
 					}
 				});
 			});
-
-			function initMap() {
-				// The location of Uluru
-				var uluru = { lat: -25.344, lng: 131.036 };
-				// The map, centered at Uluru
-				var map = new google.maps.Map(
-					document.getElementById('map'), { zoom: 4, center: uluru });
-				// The marker, positioned at Uluru
-				var marker = new google.maps.Marker({ position: uluru, map: map });
-			}
 		});
 	</script>
-
-	<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4J8DrZoHi63jtNMfPzwDrJyL56WWrv4A&callback=initMap">
-		</script>
 	<!---------Fim Scripts--------->
 </body>
 
