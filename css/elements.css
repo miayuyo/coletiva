@@ -362,8 +362,8 @@
 }
 
 .image-container {
-    max-width: 200px;
-    margin: 0 auto 35px;
+    max-width: 250px;
+    margin: 0 auto;
 }
 
 .image-container img {
@@ -601,6 +601,9 @@
     border-radius: 50%;
     margin: 0 auto 15px;
     position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .top-ranking__nivel {
@@ -650,6 +653,9 @@
     border-radius: 50%;
     margin-right: 15px;
     position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .ranking__nivel {
@@ -679,10 +685,25 @@
     height: 130px;
     border-radius: 50%;
     background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .profile-info__photo--gerador1 {
+    background-image: url('../images/foto/gerad-tiagom.jpg');
+}
 
+.profile-info__photo--gerador2 {
+    background-image: url('../images/foto/gerad-fernandap.jpg');
+}
+
+.profile-info__photo--gerador3 {
+    background-image: url('../images/foto/gerad-feliper.jpg');
+}
+
+.profile-info__photo--gerador4 {
+    background-image: url('../images/foto/gerad-marinac.jpg');
 }
 
 .profile-medals__item {
@@ -845,6 +866,14 @@
     background-image: url('../images/foto/catad-inacio.jpg');  
 }
 
+.chat__avatar-catad2 {
+    background-image: url('../images/foto/catad-roberto.jpg');  
+}
+
+.chat__avatar-catad3 {
+    background-image: url('../images/foto/catad-carla.jpg');  
+}
+
 .chat__avancar {
     width: 10px;
 }
@@ -863,6 +892,10 @@
 
 .chat__avatar-coop {
     background-image: url('../images/foto/coop-cidadeverde.jpg');  
+}
+
+.chat__avatar-coop2 {
+    background-image: url('../images/foto/coop-begreen.jpg');  
 }
 
 .chat__gerador {
@@ -889,4 +922,91 @@
     bottom: 80px;
     right: 0;
     left: 0;
+}
+
+/*----- APP CARTEIRA -----*/
+.carteira-header {
+    padding: 20px 20px 25px;
+    background-color: #083958;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    height: 160px;
+    text-align: center;
+}
+
+.carteira-header .button {
+    width: 150px;
+    padding: 10px;
+}
+
+.carteira-header__tutorial {
+    width: 100%;
+    height: 50px;
+    text-decoration: none;
+    background-color: #0e6c94;
+    color: #fff;
+    padding: 16px;
+}
+
+.carteira-header__tutorial p {
+    margin-right: 3px;
+}
+
+.carteira-movimento__item {
+    margin-bottom: 25px;
+}
+
+.carteira-header__icon {
+    width: 13px;
+}
+
+.carteira-movimento__esquerda {
+    margin-right: 15px;
+}
+
+.carteira-movimento__icon {
+    width: 25px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.carteira-movimento__detalhes {
+    text-align: left;
+}
+
+.line {
+    width: 1px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    background-color: #ccc;
+}
+
+.carteira-pagar-content {
+    padding: 20px 16px;
+}
+
+.carteira-pagar-bars {
+    margin-top: 20px;
+}
+
+.barcode, .qrcode {
+    flex-shrink: 0;
+    display: block;
+}
+
+.barcode {
+    display: block;
+    width: 220px;
+}
+
+.qrcode {
+    width: 80px;
+}
+
+.carteira-concluido {
+    display: block;
+    width: 200px;
+    margin: 30px auto;
 }

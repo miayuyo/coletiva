@@ -58,8 +58,8 @@ ul li {
     padding-left: 20px;
 }
 
-.pt-8per {
-    padding-top: 8%;
+.pt-8per, .pt-15per {
+    padding-top: 12%;
 }
 
 .mt-10 {
@@ -127,6 +127,10 @@ ul li {
 }
 
 /*--------- Tipografia ---------*/
+.size--28 {
+    font-size: 28px;
+}
+
 .size--24 {
     font-size: 24px;
 }
@@ -173,6 +177,10 @@ ul li {
 
 .color--gray {
     color: #5d5d5d;
+}
+
+.color--lightgray {
+    color: #bbb;
 }
 
 .color--green {

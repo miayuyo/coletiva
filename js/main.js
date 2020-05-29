@@ -40,7 +40,7 @@ $('#selectable').selectable({
     }
 });
 
-var swiperLogin = new Swiper ('.swiper-login-primeiro', {
+var swiperLogin = new Swiper ('.swiper-container, .swiper-login', {
     loop: false,    
     autoplay: {
         delay: 2500,
