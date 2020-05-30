@@ -14,13 +14,12 @@
 
 <body id="fadeIn">
 
-	<div class="container flex flex--column flex--justify-between">
+	<div class="container flex flex--column">
 		<div class="menu-top" id="menuBtn">
 			<img class="menu-top__button" src="./images/icones/menu.png" alt="">
 		</div>
 
 		<!---------Menu Lateral--------->
-		<!-- <div class="menu-top-overlay"></div> -->
 		<div class="menu-top-container" id="menuContainer">
 			<div class="menu-perfil">
 				<div class="menu-perfil__foto">
@@ -49,49 +48,84 @@
 		</div>
 		<!---------Fim Menu Lateral--------->
 
-		<div class="map">
-			<div class="localizacao icone">
-				<img src="./images/icones/localizacao.png" alt="">
+		<div class="header flex flex--align-center flex--justify-center">
+			<p class="size--18 weight--medium">Perfil</p>
+		</div>
+
+		<div class="header-buttons flex flex--justify-between pt-20">
+			<div class="header-buttons__block">
+				<a class="back-button" href="javascript: history.go(-1)">
+					<div class="back-button-content flex flex--align-center">
+						<img class="back-button-icon" src="./images/icones/voltar.png" alt="Ícone apontando para a esquerda">
+						<p class="back-button-text">Voltar</p>
+					</div>
+				</a>
 			</div>
 
-			<div class="localizacao icone">
-				<img src="./images/icones/localizacao.png" alt="">
+			<div class="header-buttons__block">
+				<a class="back-button" href="#">
+					<div class="back-button-content flex flex--align-center">
+						<img class="back-button-icon" src="./images/icones/reportar.png" alt="Ícone apontando para a esquerda">
+						<p class="back-button-text">Reportar</p>
+					</div>
+				</a>
 			</div>
 		</div>
 
-		<div class="home-menu">
-			<button class="home-menu__dropdown" id="homeMenu"><span class="home-menu__line"></span></button>
-			<div class="home-menu__top flex flex--align-center flex--justify-between">
-				<div class="home-menu__block">
-					<p class="size--20">Olá, <span class="weight--medium">Tiago</span>!</p>
+		<div class="content-container p-16">
+			<div class="profile-info">	
+				<div class="profile-info__photo profile-info__photo--gerador3">		
+				</div>		
+				<div class="profile-label flex flex--align-center flex--justify-center">
+					<img class="profile-label__icon" src="./images/icones/profile-gerador.png" alt="">
+					<p class="size--16">Gerador</p>
+				</div>	
+				<p class="txt--center size--20 weight--medium">Felipe R.</p>
+			</div>		
+
+			<div class="profile-medals flex flex--justify-around">
+				<div class="profile-medals__item">
+					<img class="profile-medals__icon" src="./images/icones/medalha-ranking.png" alt="">
+					<p class="weight--medium">Rank #<span class="ranking-highlight">3</span></p>
+					<p class="ranking-pr"><span>10485</span> PR</p>
 				</div>
-				<div class="home-menu__block flex flex--align-center">
-					<img class="home-menu__level" src="./images/icones/nivel-master.png" alt="">
-					<p class="size--20">Nível <span class="weight--medium">Mestre</span></p>
+				<div class="profile-medals__item">
+					<img class="profile-medals__icon" src="./images/icones/medalha-coletiva.png" alt="">
+					<p class="weight--medium">Doações</p>
+					<p class="ranking-pr"><span>2097</span> x</p>
+				</div>
+				<div class="profile-medals__item">
+					<img class="profile-medals__icon" src="./images/icones/medalha-tempo.png" alt="">
+					<p class="weight--medium">Ativo</p>
+					<p class="ranking-pr">há 11 meses</p>
 				</div>
 			</div>
-			<div class="home-menu__content">
-				<div class="searchbox-wrapper">
-					<input class="searchbox" type="text" name="" id="searchbox" placeholder="O que você quer descartar hoje?">
-					<img class="searchbox__icon" src="./images/icones/avancar-bit-white.png" alt="">
+			<div class="hr-40"></div>
+
+			<p class="txt--center size--20 weight--medium">Doações realizadas</p>
+			<div class="profile-medals flex flex--justify-around flex--wrap">
+				<div class="profile-medals__item">
+					<img class="profile-medals__icon" src="./images/icones/lixo-plastico.png" alt="">
+					<p class="weight--medium">Plástico</p>
+					<p class="ranking-pr"><span>1653</span> x</p>
 				</div>
-				<p class="weight--bold size--20 mb-10">Meus favoritos</p>
-				<a class="home-menu__option flex flex--align-center flex--justify-between" href="./app-profile-cooperativa1.html">
-					<img class="home-menu__icon" src="./images/icones/favorito-cooperativa.png" alt="">
-					<div class="home-menu__info">
-						<p class="size--18 weight--medium">Cooperativa Cidade Verde</p>
-						<p class="home-menu__address size--16">Rua das Sucatas, 123 - Sucatolândia, São Paulo</p>
-					</div>
-				</a>
+				<div class="profile-medals__item">
+					<img class="profile-medals__icon" src="./images/icones/lixo-metal.png" alt="">
+					<p class="weight--medium">Metal</p>
+					<p class="ranking-pr"><span>356</span> x</p>
+				</div>
+				<div class="profile-medals__item">
+					<img class="profile-medals__icon" src="./images/icones/lixo-vidro.png" alt="">
+					<p class="weight--medium">Vidro</p>
+					<p class="ranking-pr"><span>125</span> x</p>
+				</div>
+			</div>
+			<div class="hr-40"></div>
 
-				<div class="hr"></div>
-
-				<a class="home-menu__option flex flex--align-center flex--justify-between" href="./app-profile-catador2.html">
-					<img class="home-menu__icon" src="./images/icones/favorito-catador.png" alt="">
-					<div class="home-menu__info">
-						<p class="size--18 weight--medium">Inácio da Silva</p>
-						<p class="home-menu__address size--16">Rua das Sucatas, 456 - Sucatolândia, São Paulo</p>
-					</div>
+			<div class="profile-contact">
+				<a class="profile-contact__option flex flex--align-center" href="#">
+					<img class="profile-contact__icon" src="./images/icones/mensagens.png" alt="">
+					<p class="weight--medium">Enviar mensagem</p>
 				</a>
 			</div>
 		</div>
@@ -124,6 +158,7 @@
 		</div>
 	</div>
 
+
 	<!---------Início Scripts--------->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -132,13 +167,31 @@
 	<script src="js/main.js"></script>
 	<script>
 		$(document).ready(function () {
+			$('#tabs li a:not(:first)').addClass('inactive');
+			$('.tabs-section__screen').hide();
+			$('.tabs-section__screen:first').show();
+
+			$('#tabs li a').click(function () {
+				var t = $(this).attr('id');
+				if ($(this).hasClass('inactive')) {
+					$('#tabs li a').addClass('inactive');
+					$(this).removeClass('inactive');
+
+					$('.tabs-section__screen').hide();
+					$('#' + t + 'C').fadeIn('slow');
+				}
+			});
+
 			$('#searchbox').keydown(function (e) {
 				if (e.which === 13) {
-					window.location = "https://miayuyo.github.io/coletiva/app-agendar-3.html";
+					window.location = "https://miayuyo.github.io/coletiva/login.html";
 				}
 			});
 
 			$('#homeMenu').click(function () {
+				mudaSlider();
+			});
+			$('#fecharLogin').click(function () {
 				mudaSlider();
 			});
 
@@ -164,8 +217,22 @@
 					}
 				});
 			});
+
+			function initMap() {
+				// The location of Uluru
+				var uluru = { lat: -25.344, lng: 131.036 };
+				// The map, centered at Uluru
+				var map = new google.maps.Map(
+					document.getElementById('map'), { zoom: 4, center: uluru });
+				// The marker, positioned at Uluru
+				var marker = new google.maps.Marker({ position: uluru, map: map });
+			}
 		});
 	</script>
+
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4J8DrZoHi63jtNMfPzwDrJyL56WWrv4A&callback=initMap">
+		</script>
 	<!---------Fim Scripts--------->
 </body>
 

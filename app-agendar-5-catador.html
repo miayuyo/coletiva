@@ -54,16 +54,12 @@
 
 		<div class="content-container p-16">
 			<p class="mt-50 mb-50 txt--center">Informe a data e o horário combinado com <b>Inácio da Silva</b>:</p>
-			<div class="form">
+			<div class="form mb-50">
 				<div class="form__block">
-					<input class="form__input js-date" maxlength="10" id="dataAgendada" type="text" name="dataAgendada"
-						required>
-					<label class="form__label time" for="dataAgendada">Data</label>
+					<input class="form__datetime" type="date" name="date" id="date" />
 				</div>
 				<div class="form__block">
-					<input class="form__input timepicker" maxlength="10" id="horarioAgendada" type="number"
-						name="horarioAgendada" required>
-					<label class="form__label" for="horarioAgendada">Horário</label>
+					<input class="form__datetime" type="time" id="appt" name="appt">
 				</div>
 			</div>
 			<a class="button bottom__button--primario mt-30" href="./app-consultar.html">Agendar</a>
