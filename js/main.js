@@ -43,7 +43,7 @@ $('#selectable').selectable({
 var swiperLogin = new Swiper ('.swiper-container, .swiper-login', {
     loop: false,    
     autoplay: {
-        delay: 2500,
+        delay: 3500,
         stopOnLastSlide: true,
     },
     pagination: {

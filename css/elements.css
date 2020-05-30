@@ -183,6 +183,7 @@
     font-size: 16px;
     font-weight: 300;
     font-family: 'Rubik', sans-serif;
+    outline: 0;
 }
 
 .form__input:disabled~.form__label {
@@ -217,6 +218,22 @@
     left: -4px;
     border-top: 2px;
     border-bottom: 2px;
+}
+
+.form__datetime {
+    background: no-repeat;
+    border: 0;
+    width: 100%;
+    border-bottom: 2px solid #fff;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: .3s ease;
+    outline: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+.form__datetime:focus {
+    background-color: #fff;
 }
 
 .form__icon {
@@ -258,11 +275,6 @@
 .options-button {
     text-decoration: none;
     color: #222;
-    margin-bottom: 60px;
-}
-
-.options-button:nth-child(2) {
-    margin-bottom: 0;
 }
 
 .options-title {
@@ -458,16 +470,16 @@
     width: 100%;
     height: .5px;
     background-color: #222;
-    opacity: .2;
+    opacity: .1;
     margin: 20px auto;
 }
 
 .hr-40 {
     display: block;
-    width: 100%;
+    width: 220px;
     height: .5px;
     background-color: #222;
-    opacity: .2;
+    opacity: .1;
     margin: 40px auto;
 }
 
@@ -592,6 +604,8 @@
 
 .top-ranking__block {
     display: block;
+    text-decoration: none;
+    color: #222;
 }
 
 .top-ranking__photo {
@@ -874,6 +888,10 @@
     background-image: url('../images/foto/catad-carla.jpg');  
 }
 
+.chat__avatar-catad4 {
+    background-image: url('../images/foto/catad-maria.jpg');  
+}
+
 .chat__avancar {
     width: 10px;
 }
@@ -984,7 +1002,7 @@
 }
 
 .carteira-pagar-content {
-    padding: 20px 16px;
+    padding: 50px 16px;
 }
 
 .carteira-pagar-bars {
@@ -1009,4 +1027,19 @@
     display: block;
     width: 200px;
     margin: 30px auto;
+}
+
+@media (min-width: 414px) {
+    .home-menu__address {
+        max-width: 315px;
+    }
+
+    .menu {
+        margin-bottom: -2px;
+    }
+
+    .coletivar-container {
+        padding-top: 60px;
+        padding-bottom: 150px;
+    }
 }
